@@ -1,0 +1,126 @@
+// Thanks to arc42 https://github.com/arc42/arc42-template
+// for asciidoc jumpstart
+
+// =====================================================
+// Full architecture documentation
+// =====================================================
+
+= NextMagentaCLOUD architecture
+:doctype: book
+:title-page:
+:toc:
+include::about.adoc[]
+:description:   NextMagentaCloud architecture documentation, complete content
+include::config.adoc[]
+
+// numbering from here on
+:numbered:
+:chapter-signifier:
+
+<<<<
+// Problem statement and architecture goals
+include::architecture/goals.adoc[]
+
+<<<<
+== Logical building blocks
+include::architecture/logical/systemcontext.adoc[]
+
+include::architecture/logical/stakeholders.adoc[]
+
+<<<<
+include::architecture/logical/image_hierarchy.adoc[]
+
+<<<<
+include::architecture/logical/ident_provisioning.adoc[]
+
+<<<<
+include::architecture/logical/provisioning_rate_rules.adoc[]
+
+<<<<
+include::architecture/businessreporting.adoc
+
+<<<<
+include::architecture/logical/partner_sam3_token.adoc[]
+
+<<<<
+include::architecture/logical/provisioning_slup.adoc[]
+
+<<<<
+== System building blocks
+include::architecture/system/systemdesign.adoc[]
+
+include::architecture/system/environments.adoc[]
+
+include::architecture/system/orchestration.adoc[]
+
+include::architecture/system/securitygroups.adoc[]
+
+include::architecture/system/database.adoc[]
+
+<<<<
+include::architecture/system/migration_system_extension.adoc[]
+
+<<<<
+== Quality scenarios
+include::architecture/quality/maintainability_supported_releases.adoc[]
+
+include::architecture/quality/security_tls_certificates.adoc[]
+
+include::architecture/quality/compatibility_client.adoc[]
+
+include::architecture/quality/test_automation.adoc[]
+
+include::architecture/quality/performance_database_tuning.adoc[]
+
+include::architecture/quality/availability_thick_thumbs.adoc[]
+
+
+<<<<
+== Cross cutting concepts
+include::architecture/conceptual/release.adoc[]
+
+<<<<
+include::architecture/conceptual/versioning.adoc[]
+
+<<<<
+include::architecture/conceptual/postmortem.adoc[]
+
+<<<<
+include::architecture/conceptual/serverpass.adoc[]
+
+
+<<<<
+include::architecture/conceptual/authorisation.adoc[]
+
+<<<<
+include::architecture/conceptual/testuser.adoc[]
+
+
+<<<<
+// Collection of architecture principles
+include::architecture/principles.adoc[]
+
+<<<<
+// Collection of (current) technical debts
+include::architecture/debt.adoc[]
+
+<<<<
+// Collection of arch. decisions
+include::architecture/decisions.adoc[]
+
+
+<<<<
+[appendix]
+// Tools,tips & tricks
+include::architecture/tools.adoc[]
+
+<<<<
+[appendix]
+include::architecture/protocols.adoc[]
+
+<<<<
+[appendix]
+include::architecture/glossary.adoc[]
+
+[appendix]
+include::architecture/references.adoc[]

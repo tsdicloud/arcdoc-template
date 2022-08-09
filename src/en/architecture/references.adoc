@@ -1,0 +1,9 @@
+// == References
+
+[bibliography]
+* [[[Contract]]] Contracted deliverables ("Leistungsbeschreibung")
+https://where.to.find/contract.doc
+* [[[MagentaCICD]]] Documentation of MagentaCICD specialities:
+https://docs.devops.telekom.de/documentation/mcicd/
+* [[[Arc42]]] arc42 Documentation, 144 tips and 33 examples how to use the arc42 template.
+https://docs.arc42.org/home/

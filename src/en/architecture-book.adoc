@@ -1,0 +1,78 @@
+// Thanks to arc42 https://github.com/arc42/arc42-template
+// for asciidoc jumpstart
+
+// =====================================================
+// Full architecture documentation
+// =====================================================
+
+= A T-Systems architecture
+:doctype: book
+:title-page:
+:toc:
+include::about.adoc[]
+:description:   Template for T-Systems architecture descriptions
+include::config.adoc[]
+
+// numbering from here on
+:numbered:
+:chapter-signifier:
+
+<<<<
+== Introduction and purpose
+include::architecture/purpose.adoc[]
+
+include::architecture/systemcontext.adoc[]
+
+include::architecture/stakeholders.adoc[]
+
+<<<<
+== Goals and constraints
+include::architecture/goals.adoc[]
+
+include::architecture/constraints.adoc[]
+
+<<<<
+== Logical building blocks
+//include::architecture/logical/overview.adoc[]
+
+<<<<
+== System building blocks
+//include::architecture/system/systemdesign.adoc[]
+
+<<<<
+== Quality scenarios
+//include::architecture/quality/maintainability_supported_releases.adoc[]
+
+<<<<
+== Cross cutting concepts
+//include::architecture/conceptual/release.adoc[]
+
+<<<<
+== Principles
+include::architecture/principles.adoc[]
+
+<<<<
+== Risks and debts
+// Collection of (current) technical debts
+include::architecture/riskdebt.adoc[]
+
+<<<<
+== Decision log
+// Collection of arch. decisions
+include::architecture/decisions.adoc[]
+
+
+<<<<
+[appendix]
+== Glossary
+include::architecture/glossary.adoc[]
+
+<<<<
+[appendix]
+== Tips, tricks, tools
+include::architecture/tools.adoc[]
+
+<<<<
+[appendix]
+== References
+include::architecture/references.adoc[]

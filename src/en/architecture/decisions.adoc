@@ -1,0 +1,5 @@
+// == Decision log
+
+23/10/01::
+Versioning/release concept: Simplified by not using master branch at all. Our trunk is a `myrel/XX.yy.zz` release
+branche.  

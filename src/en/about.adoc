@@ -1,0 +1,8 @@
+:author_1:         First author name
+:authorinitials_1: fan
+:email_1:          first.author@some.domain
+:revdate:          2022/08/08
+:revnumber:        ,Version 0.5.0
+:revremark:        internal
+:version-label:    T-Systems, PU Digital - BA Emerging Industries
+// don´t use empty lines between information

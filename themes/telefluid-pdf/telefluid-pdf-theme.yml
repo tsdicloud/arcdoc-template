@@ -1,0 +1,207 @@
+extends: default
+font:
+  catalog:
+    merge: false
+    Noto Serif:
+      normal: GEM_FONTS_DIR/notoserif-regular-subset.ttf
+      bold: GEM_FONTS_DIR/notoserif-bold-subset.ttf
+      italic: GEM_FONTS_DIR/notoserif-italic-subset.ttf
+      bold_italic: GEM_FONTS_DIR/notoserif-bold_italic-subset.ttf
+    M+ 1mn:
+      normal: GEM_FONTS_DIR/mplus1mn-regular-subset.ttf
+      bold: GEM_FONTS_DIR/mplus1mn-bold-subset.ttf
+      italic: GEM_FONTS_DIR/mplus1mn-italic-subset.ttf
+      bold_italic: GEM_FONTS_DIR/mplus1mn-bold_italic-subset.ttf
+    TeleNeo:
+      # otf does not work reliably yet
+      # normal: TeleNeo-Regular.otf
+      # bold: TeleNeo-ExtraBold.otf
+      # italic: TeleNeo-RegularItalic.otf
+      # bold_italic: TeleNeo-Medium.otf
+      normal: TeleNeoOffice-Regular.ttf
+      bold: TeleNeoOffice-ExtraBold.ttf
+      italic: TeleNeoOffice-RegularItalic.ttf
+      bold_italic: TeleNeoOffice-Medium.ttf
+  fallbacks:
+  - Noto Serif
+tele:
+  primary-color: E20074
+  secondary-color: 216BFF
+  head-default-color: 999999
+  literal-color: 999999
+  text-color: 000000
+  light-shade: E5E5E5
+  medium-shade: 666666
+  dark-shade: 191919
+  white: FFFFFF
+  check-color: 187431
+  uncheck-color: D82A48
+  box-color: FFF4C6
+page:
+  margin-outer: [2.2cm 2.2cm 2.2cm 2.2cm]
+  layout: portrait
+  size: A4
+title:
+  page:
+    font-color: $tele-dark-shade
+    font-family: TeleNeo
+    font-style: bold_italic
+    align: left
+    line-height: 1
+    logo:
+      image: T_systems_logo_rgb_p.svg
+      align: left
+      top: 95%
+    title:
+      # display: none
+      font-color: $tele-primary-color
+      font-size: 36pt
+    subtitle:
+      # display: none
+      font-size: 26pt
+    authors:
+      display: none
+      font-size: 18pt
+      content:
+        name_only: "{author}"
+        with_email: "{author} <{email}>"
+    revision:
+      margin-top: 48pt
+      # display: none
+      font-size: 18pt
+      ## delimiter: '\n'
+footer:
+  border-style: none
+  border-color: $tele-white
+  column-rule-style: none
+  column-color: $tele-white
+  height: 1.5cm
+  recto:
+    right:
+      content: '{page-number}'
+    center:
+      content: '{revremark}'
+    left:
+      content: '{version-label}'
+  verso:
+    left:
+      content: '{page-number}'
+    center:
+      content: '{revremark}'
+    right:
+      content: '{version-label}'
+base:
+  font:
+    color: $tele-text-color
+    family: TeleNeo
+    style: normal
+    size: 11
+    line-height: 1.25
+link:
+  font-color: $tele-secondary-color
+heading:
+  chapter-break-before: auto
+  font:
+    line-height: 1    
+    family: TeleNeo
+    style: bold
+  h1:
+    font-color: $tele-primary-color
+    font-size: 20pt
+  h2:
+    font-color: $tele-primary-color
+    font-size: 20pt
+  h3:
+    font-color: $tele-secondary-color
+    font-size: 14pt
+  h4:
+    font-color: $tele-head-default-color
+    font-size: 12.5pt
+  h5:
+    font-color: $tele-head-default-color
+    font-size: 12pt
+  h6:
+    font-color: $tele-head-default-color
+    font-size: $base-font-size
+#blocktitle:
+#    font:
+#      color: $tele-text-color
+#      size: $base-font-size
+#      style: bold
+#      height: 1
+caption:
+  font:
+    color: $tele-dark-shade
+    size: $base-font-size
+    style: bold
+  line-height: 1
+image:
+  caption:
+    font:
+      size: 0.8
+      color: $tele-dark-shade
+      style: bold_italic
+    line-height: $caption-font-size
+blockquote:
+  caption:
+    font-color: $tele-dark-shade
+    font-size: $base-font-size
+    style: bold
+    line-height: 1.25
+literal:
+  font-color: $tele-literal-color
+  font-size: $base-font-size * 0.8
+table:
+  background-color: transparent
+  font-size: $base-font-size * 0.8
+  line-height: 0.9
+  head:
+    font-style: normal
+    font-color: $tele-primary-color
+    border-bottom-width: 1
+description-list:
+  font-size: $base-font-size
+  font_color: $tele-dark-shade
+  block-margin-top: 2
+  block-margin-bottom: 2
+outline-list:
+  marker-font-color: $tele-primary-color
+  item-spacing: 4
+ulist:
+  marker-disc:
+    content: "\u25a0"
+    font_color: $tele-primary-color
+    line-height: 0.6
+  marker-square:
+    content: "\u25a0"
+    font_color: $tele-primary-color
+    line-height: 0.6
+  marker-circle:
+    content: "\u25a0"
+    font_color: $tele-primary-color
+    line-height: 0.6
+  marker-checked:
+    content: "\u2713"
+    font_color: $tele-check-color
+    line-height: 0.6
+  marker-unchecked:
+    content: "\u2715"
+    font_color: $tele-uncheck-color
+    line-height: 0.6
+code:
+  font-size: $base-font-size * 0.8
+  background-color: $tele-light-shade
+  border-radius: 0
+  border-width: 0
+  linenum:
+    font-color: $tele-primary-color
+conum:
+    font_color: $tele-primary-color
+
+example:
+  font-family: TeleNeo
+  font-style: normal
+  background-color: $tele-box-color
+  border-radius: 0
+  border-width: 0
+  

@@ -1,0 +1,105 @@
+=== Stakeholders
+
+==== System roles
+
+.BusinessAdmin
+<Role decription without concrete person yet, persona style>
+
+.ExploringUser
+<Role decription without concrete person yet, persona style>
+
+.IntegrationPartner
+<Role decription without concrete person yet, persona style>
+
+==== Integration partners
+
+.Service consumers, providers, partner
+[grid="rows",cols="1,1,1,1,1,1,1",options="header",frame="none"]
+|====
+|System
+|Name
+|Role
+|Unit (legal entity)
+|Phone
+|E-Mail
+|Location
+
+|Payment
+|Alex Steam
+|Tech. contact PayMe
+|IT-Integration
+|+49 6151 58 585858
+|asteam@pay.me
+|Ida-Rhodes-Straße 2 + 64295 Darmstadt
+
+|AdventureCatalog
+|Matthias Brumm
+|Tech. contact ACAT
+|
+|+49 170 12345678
+|matthiasb@acat.com
+|Ida-Rhodes-Straße 2 + 64295 Darmstadt
+
+|CustomerBase CRM
+|George Ignis
+|Data Management
+|T-Systems Limited, UK
+|+44 753 11223344
+|george.ignis@t-systems.com
+|
+
+|====
+
+
+==== Project
+
+.System owner
+<optional put a small role description here>
+
+[cols="h,d,d",grid="rows",options="header",frame="none"]
+|====
+|                    |Product                                      |Technical
+
+|Name                |Karl Meins                                   |Paul Clever
+|Role                |Product owner                                |Lead architect
+|Unit (legal entity) |TDG, Produkte                                |T-Systems, PU Digital, BA EI
+|Phone               |+49 175 49494959                             |+49 160 78907890
+|E-Mail              |k.meins@telekom.de                           |paul.clever@t-systems.com
+|Location            |Deutsche-Telekom-Allee 9 + 64295 Darmstadt   |Mecklenburgring 25 + 66121 Saarbrücken
+|====
+
+
+.Development
+<optional put a role description here>
+
+[cols="h,d,d",grid="rows",options="header",frame="none"]
+|====
+|                    |Product features/innovation                 |Technical
+
+|Name                |John Doe                                    |Ashok Ventisch
+|Role                |TS product manager                          |Dev lead, SCRUM master
+|Unit (legal entity) |T-Systems, PU Digital                       |T-Systems ICT India Pvt. Ltd.
+|Phone               |+49 151 66778899                            |+91 993 1234567
+|E-Mail              |john.doe@t-systems.com                      |ashok.ventish@t-systems.com
+|Location            |Friedrich-Ebert-Allee 140 + 53113 Bonn      |Tech Park,shivajinagar + 411005 Pune
+|====
+
+
+==== Operations
+
+.Application management
+[cols="h,d,d",grid="rows",options="header",frame="none"]
+|====
+|                    |commercial                                  |technical
+
+|Name                |Peter Huepf                                 |Marco Biztics
+|Role                |Service manager                             |AM lead
+|Unit (legal entity) |T-Systems, PU Digital                       |Deutsche Telekom Systems Solutions Hungary Kft.
+|Phone               |+49 171 17181920                            |+36 30 31323334
+|E-Mail              |p.huepf@t-systems.com                       |f.biztics@t-systems.com
+|Location            |Fasanenweg 5 + 70771 Leinfelden-Echterdingen|Tóth Kálmán utca 2 + 1097 Budapest
+|====
+
+Service email box: mailto:my.cool.solution@t-systems.com
+
+

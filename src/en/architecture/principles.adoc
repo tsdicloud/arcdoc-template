@@ -1,0 +1,18 @@
+
+// == Principles
+
+////
+There are a lot of guidelines set during the implementation of the architecture that guide
+what to do and what not. A list of these principles is usually not available.
+We fix that by gathering all principles here, tag them and include as text blocks where they apply. 
+////
+
+// tag::p_twelvefactor[[ref_principle_12factor, 12-factor app principle]]
+12-factor app:: [[ref_principle_12factor, 12-factor app]]
+    The cloud design follows the principles of a https://12factor.net[12-factor app].
+// end::p_twelvefactor[]
+// tag::p_agnosticimage[]
+Stage-agnostic images:: [[ref_principle_agnostic_image, Stage-agnostic images]]
+    (Server) images are environment-agnostic. They are packed once and used unchanged in all environments along the
+    staging chain.
+// end::p_agnosticimage[]

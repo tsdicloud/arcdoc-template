@@ -1,0 +1,85 @@
+// == Tips, tricks, tools faq
+
+The following sections help to use asciidoc and are an example how this chapter could be helpful at the same time.
+
+=== Generate/debug doc generation with asciidoctor
+You need at least Asciidoctor PDF (https://docs.asciidoctor.org/asciidoctor/latest/install/[install instructions]) and 
+Asciidoctor (https://docs.asciidoctor.org/asciidoctor/latest/install/[install instructions]) to run the following 
+commands successful.
+
+E.g. under Ubuntu, install the following packages
+```
+sudo apt-get install asciidoctor ruby-asciidoctor-pdf
+```
+
+.html
+As working commandline call for `asciidoctor` to trace doc generation is:
+----
+cd arcdoc-template
+asciidoctor -a linkcss -a stylesheet=telefluid.css -a stylesdir=../../themes/telefluid --verbose\
+   --trace src/en/architecture-book.adoc
+----
+
+.pdf
+As working commandline call for `asciidoctor-pdf` to trace doc generation is:
+----
+cd arcdoc-template
+asciidoctor-pdf -a toc -a pdf-fontsdir=themes/telefluid-pdf -a pdf-themesdir=themes/telefluid-pdf\
+   -a pdf-theme=telefluid-pdf --destination-dir=pdf --trace --verbose src/en/architecture-book.adoc
+----
+
+=== draw.io and formatted labels
+We use the open tool draw.io (either on internet of via https://mywiki.telekom.de embedded in pages there as advanced
+element option). The diagrams should be exported as SVG for optimal scalability.
+
+When generating documentation, the diagram sometimes shows not up properly in pdf with an image-embedded error
+*Viewer does not support full SVG 1.1* This means your diagrams requires reformatting as described here:
+https://desk.draw.io/support/solutions/articles/16000042487-why-text-in-exported
+
+[IMPORTANT]
+To really disable the options for all elements, you sometimes have to explicitly check/uncheck the checkboxes until the
+svg warning disappears!
+
+
+=== Asciidoc in VScode
+It is recommended to use the following extension in VScode for docs-as-code:
+
+-  https://github.com/asciidoctor/asciidoctor-vscode[AsciiDoc extension]
+
+-  https://github.com/streetsidesoftware/vscode-spell-checker[Code Spell Checker extension supporting AsciiDoc]
+
+
+To make preview for images working in VScode, open the `nmcdocs` repository as a workspace and add some lines to 
+`settings.json`
+----
+"[asciidoc]": {
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wrappingIndent": "same",
+    "editor.wordWrapColumn": 120
+    "editor.rulers": [120]
+},
+"asciidoc.preview.attributes": {
+    "toc": "auto",
+    "imagesdir": "${workspaceFolder}/images/",
+},
+"asciidoc.trace": "verbose",
+"asciidoc.asciidoctorpdf_command": "asciidoctor-pdf -a pdf-fontsdir=themes/telefluid-pdf\
+   -a pdf-themesdir=themes/telefluid-pdf -a pdf-theme=telefluid-pdf --destination-dir=../.. --trace --verbose",
+"asciidoc.use_asciidoctorpdf": true,
+"asciidoc.preview.useEditorStyle": false,
+----
+
+
+
+=== Use a spell checker in VScode
+Install the `Code Spell Checker` extension in your VSCode. After that, a blue wiggly line will mark
+suspicious words.
+
+Add a predefined set of additional wordings to `settings.json` to reduce the number of
+suspicious markers for our architecture documentation:
+----
+"cSpell.language": "en-GB",
+"cSpell.words": [
+    "adoc", "agnosticimage", "Andreas", "asciidoctor", "asciidoctorpdf" 
+],
+----

@@ -1,0 +1,4 @@
+// GitHub at al. ear a Readme as top level doc
+// and display it only when navigating to the project
+// We can simply include our toplevel document
+include::src/en/architecture-book.adoc[]

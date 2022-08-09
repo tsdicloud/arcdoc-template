@@ -1,0 +1,21 @@
+.No unittest coverage for customizings
+The customizing team has not managed to implement unittests accompanying their development.
+Consequences are:
+
+- the reduction to blackbox testing (= clicktests from outside the system) only give no picture
+  about the base quality of the delivered changes
+
+- many rainy day scenarios with separate codepathes are completely untested
+
+- there are no automated unit testsuite (whitebox) with relevant code coverage for user interface
+  and client customisation parts. (Some business logic parts have as a role model.)
+
+- There is no Continuous Integration Pipeline that forces code formatting, linting and automated testing
+  for newly produced code and ensures a quality baseline.
+
+
+_Recommendation: This shortcoming has been addressed regularly from architecture, but no progress yet.
+Frontend/client development still fully relies on high-level blackbox testing (Selenium and manual).
+It is urgently recommended that the project or the following application management is catching up with
+the whitebox testing shortcoming to reach the goal of release-robustness._
+

@@ -1,0 +1,16 @@
+pkg/
+/Gemfile.lock
+/.bundle
+/*.gem
+/*.html
+/.idea/
+/.ruby-gemset
+/.ruby-version
+/.yardoc/
+/rdoc/
+/shippable/
+
+.DS_Store
+asciidoctor.css
+src/*.pdf
+settings.json

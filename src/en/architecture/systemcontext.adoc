@@ -1,0 +1,12 @@
+=== System context
+Describe the "ecosystem" surrounding your system, as far as possible without solution technology details.
+It is a joint "setting the scene" for stakeholders and your engineers depicting all the roles and partner systems
+the new solution is planned to integrate and interact with.
+
+See also https://docs.arc42.org/section-3/ and esp. https://docs.arc42.org/tips/3-2/ for more hints about composing
+context diagram. As we see the first chapter of the documentation less formal and technology driven than probably arc42
+does, we recommend a business diagram enhanced with few technical bites the customer expects to see if start reading,
+Deeper technical context diagrams and those that refer to solution details go into the logical building block section.
+
+.System context example diagram
+image::context_en.drawio.svg[System context view]
