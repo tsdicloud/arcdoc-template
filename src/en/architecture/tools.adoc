@@ -10,24 +10,58 @@ Asciidoctor (https://docs.asciidoctor.org/asciidoctor/latest/install/[install in
 commands successful.
 
 E.g. under Ubuntu, install the following packages
-```
+----
 sudo apt-get install asciidoctor ruby-asciidoctor-pdf
-```
+----
 
 .html
 As working commandline call for `asciidoctor` to trace doc generation is:
 ----
 cd arcdoc-template
-asciidoctor -a linkcss -a stylesheet=telefluid.css -a stylesdir=../../themes/telefluid --verbose\
-   --trace src/en/architecture-book.adoc
+asciidoctor -b html5 -a imagesdir="../../../images" -a fontsdir="../../../stylesdir"\
+ -a linkcss -a stylesdir="../../../themes/telefluid" -a stylesheet="telefluid.css"\
+ --trace --verbose --destination-dir=gen/en/html --trace src/en/architecture-book.adoc
 ----
 
 .pdf
 As working commandline call for `asciidoctor-pdf` to trace doc generation is:
 ----
 cd arcdoc-template
-asciidoctor-pdf -a toc -a pdf-fontsdir=themes/telefluid-pdf -a pdf-themesdir=themes/telefluid-pdf\
-   -a pdf-theme=telefluid-pdf --destination-dir=pdf --trace --verbose src/en/architecture-book.adoc
+asciidoctor-pdf -a toc --destination-dir="gen/en/pdf" -a imagesdir=../../images\
+ -a pdf-fontsdir="themes/telefluid-pdf" -a pdf-themesdir="themes/telefluid-pdf" -a pdf-theme="telefluid-pdf"\
+ --trace --verbose src/en/architecture-book.adoc
+----
+
+=== Version number and date based on Git tags
+The template automatically uses the values for `refnumber` and `refdate` from the values in `about.adoc`.
+It is possible to use metadata from a branch or a tag instead via commandline and set the values during generation.
+
+.Example
+Assume that we always want to generate with the latest tag and the tag creation date. Assume that version tags look 
+like `v12.34.567` and start with v:
+----
+alias arcnumber="git tag | grep 'v' | sort -r | head -1"
+alias arcdate="git log -q --tags='v*' -1 --date=short |grep -E 'Date:\s*[0-9]*-[0-9]*-[0-9]*' |grep -oE\
+    '[0-9]*-[0-9]*-[0-9]*'"
+----
+
+.html
+As working commandline call for `asciidoctor` to trace doc generation is:
+----
+cd arcdoc-template
+asciidoctor -b html5 -a imagesdir="../../../images" -a fontsdir="../../../stylesdir"\
+ -a linkcss -a stylesdir="../../../themes/telefluid" -a stylesheet="telefluid.css"\
+ -a revdate="$(arcdate)" -a revnumber=", $(arcnumber)"\
+ --trace --verbose --destination-dir=gen/en/html --trace src/en/architecture-book.adoc
+----
+
+.pdf
+----
+cd arcdoc-template
+asciidoctor-pdf -a toc --destination-dir="gen/en/pdf" -a imagesdir=../../images\
+ -a pdf-fontsdir="themes/telefluid-pdf" -a pdf-themesdir="themes/telefluid-pdf" -a pdf-theme="telefluid-pdf"\
+ -a revdate="$(arcdate)" -a revnumber=", $(arcnumber)"\
+ --trace --verbose src/en/architecture-book.adoc
 ----
 
 === Asciidoc in VScode
@@ -38,8 +72,7 @@ It is recommended to use the following extension in VScode for docs-as-code:
 -  https://github.com/streetsidesoftware/vscode-spell-checker[Code Spell Checker extension supporting AsciiDoc]
 
 
-To make preview for images working in VScode, open the `nmcdocs` repository as a workspace and add some lines to 
-`settings.json`
+To make preview for images working in VScode, add some lines to `settings.json` for User:
 ----
 "[asciidoc]": {
     "editor.rulers": [120]
@@ -53,20 +86,6 @@ To make preview for images working in VScode, open the `nmcdocs` repository as a
    -a pdf-themesdir=themes/telefluid-pdf -a pdf-theme=telefluid-pdf --destination-dir=../.. --trace --verbose",
 "asciidoc.use_asciidoctorpdf": true,
 "asciidoc.preview.useEditorStyle": false,
-----
-
-
-=== Use a spell checker in VScode
-Install the `Code Spell Checker` extension in your VSCode. After that, a blue wiggly line will mark
-suspicious words.
-
-Add a predefined set of additional wordings to `settings.json` to reduce the number of
-suspicious markers for our architecture documentation:
-----
-"cSpell.language": "en-GB",
-"cSpell.words": [
-    "adoc", "agnosticimage", "Andreas", "asciidoctor", "asciidoctorpdf" 
-],
 ----
 
 === Solve draw.io SVG and formatted labels problem

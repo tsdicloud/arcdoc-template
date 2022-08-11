@@ -4,14 +4,22 @@
 // =====================================================
 // Full architecture documentation
 // =====================================================
+ifdef::backend-html5[]
+:imagesdir: ../../images
+:linkcss:
+:stylesheet: telefluid.css
+:stylesdir: ../../themes/telefluid
+endif::[]
 
-= A T-Systems architecture
+// important sequence; don't touch
+= A T-Systems architecture template
 :doctype: book
 :title-page:
 :toc:
 include::about.adoc[]
-:description:   Template for T-Systems architecture descriptions
+:description:   A useful template to describe Magenta architectures
 include::config.adoc[]
+// end important sequence
 
 // numbering from here on
 :numbered:

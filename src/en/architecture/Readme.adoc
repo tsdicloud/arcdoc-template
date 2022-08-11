@@ -1,8 +1,2 @@
-//ifdef::backend-html5[]
-:linkcss:
-:stylesheet: telefluid.css
-:stylesdir: ../../themes/telefluid
-//endif::[]
-:imagesdir: ../../images
 
 include::architecture-book.adoc[]
