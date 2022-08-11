@@ -49,7 +49,7 @@ title:
     align: left
     line-height: 1
     logo:
-      image: T_systems_logo_rgb_p.svg
+      image: ../T_systems_logo_rgb_p.svg
       align: left
       top: 95%
     title:
