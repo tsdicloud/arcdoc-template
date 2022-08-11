@@ -9,75 +9,81 @@
  */
 
 @font-face {
-    font-family: TeleNeoRegular;
-    src: url(TeleNeoWeb-Regular.woff2) format("woff2"),
-         url(TeleNeoWeb-Regular.woff) format("woff"),
-         url(TeleNeoWeb-Regular.eot);
+  font-family: TeleNeoRegular;
+  src: url(TeleNeoWeb-Regular.woff2) format("woff2"),
+    url(TeleNeoWeb-Regular.woff) format("woff"),
+    url(TeleNeoWeb-Regular.eot);
 }
+
 @font-face {
-    font-family: TeleNeoMedium;
-    src: url(TeleNeoWeb-Medium.woff2) format("woff2"),
-         url(TeleNeoWeb-Medium.woff) format("woff"),
-         url(TeleNeoWeb-Medium.eot);
+  font-family: TeleNeoMedium;
+  src: url(TeleNeoWeb-Medium.woff2) format("woff2"),
+    url(TeleNeoWeb-Medium.woff) format("woff"),
+    url(TeleNeoWeb-Medium.eot);
 }
+
 @font-face {
-    font-family: TeleNeoItalic;
-    src: url(TeleNeoWeb-RegularItalic.woff2) format("woff2"),
-         url(TeleNeoWeb-RegularItalic.woff) format("woff"),
-         url(TeleNeoWeb-RegularItalic.eot);
+  font-family: TeleNeoItalic;
+  src: url(TeleNeoWeb-RegularItalic.woff2) format("woff2"),
+    url(TeleNeoWeb-RegularItalic.woff) format("woff"),
+    url(TeleNeoWeb-RegularItalic.eot);
 }
+
 @font-face {
-    font-family: TeleNeoExtraBold;
-    src: url(TeleNeoWeb-ExtraBold.woff2) format("woff2"),
-         url(TeleNeoWeb-ExtraBold.woff) format("woff"),
-         url(TeleNeoWeb-ExtraBold.eot);
+  font-family: TeleNeoExtraBold;
+  src: url(TeleNeoWeb-ExtraBold.woff2) format("woff2"),
+    url(TeleNeoWeb-ExtraBold.woff) format("woff"),
+    url(TeleNeoWeb-ExtraBold.eot);
 }
 
 :root {
-    --telemagenta: #E20074;
-    --teleblue: #216BFF;
-    --telered: #ED425B;
-    --teleorange: #FC9A55;
-    --teleteal: #22ADB9;
-    --telepidgeon: #828AC4;
-    --teleneptune: #77B6BB;
-    --telewhite: #FFFFFF;
-    --telegray30: #E5E5E5;
-    --telegray60: #666666;
-    --telegray90: #191919;
-    --teleblack: #000000;
+  --telemagenta: #E20074;
+  --teleblue: #216BFF;
+  --telered: #ED425B;
+  --teleorange: #FC9A55;
+  --teleteal: #22ADB9;
+  --telepidgeon: #828AC4;
+  --teleneptune: #77B6BB;
+  --telewhite: #FFFFFF;
+  --telegray30: #E5E5E5;
+  --telegray60: #666666;
+  --telegray90: #191919;
+  --teleblack: #000000;
 
-    /* use a consistent complementary color to telemagenta */
-    --tele-primary-color: var(--telemagenta);
-    --tele-secondary-color: var(--teleblue);
-    --tele-text-color: var(--teleblack);
-    --tele-light-shade: var(--telegray30);
-    --tele-medium-shade: var(--telegray60);
-    --tele-dark-shade: var(--telegray90);
-    --tele-white: var(--telewhite);
+  /* use a consistent complementary color to telemagenta */
+  --tele-primary-color: var(--telemagenta);
+  --tele-secondary-color: var(--teleblue);
+  --tele-text-color: var(--teleblack);
+  --tele-light-shade: var(--telegray30);
+  --tele-medium-shade: var(--telegray60);
+  --tele-dark-shade: var(--telegray90);
+  --tele-white: var(--telewhite);
 }
 
 
 /* Default font. */
 body {
-    font-family: TeleNeoRegular;
-    font-size: 11pt;
-    color: var(--tele-text-color);
-    line-height: 1.25
+  font-family: TeleNeoRegular;
+  font-size: 11pt;
+  color: var(--tele-text-color);
+  line-height: 1.25;
+  background-color: var(--telewhite);
 }
-  
-h1, h2, #toctitle {
-    font-family: TeleNeoExtraBold;
-    font-size: 20pt;
-    color: var(--tele-primary-color);
-    line-height: 1
+
+h1,
+h2,
+#toctitle {
+  font-family: TeleNeoExtraBold;
+  font-size: 20pt;
+  color: var(--tele-primary-color);
+  line-height: 1
 }
 
 h3 {
-    font-family: TeleNeoExtraBold;
-    font-size: 14pt;
-    color: var(--tele-secondary-color);
-    line-height: 1
+  font-family: TeleNeoExtraBold;
+  font-size: 14pt;
+  color: var(--tele-secondary-color);
+  line-height: 1
 }
 
 h4 {
@@ -87,7 +93,9 @@ h4 {
   line-height: 1
 }
 
-h5, h6, div.title {
+h5,
+h6,
+div.title {
   font-family: TeleNeoExtraBold;
   font-size: 12.5pt;
   color: var(--tele-dark-shade);
@@ -96,38 +104,54 @@ h5, h6, div.title {
 
 
 /* Title font. */
-caption.title
-  p.table.header,
-  #author, #revnumber, #revdate, #revremark,
-  #footer {
-    font-family: TeleNeoExtraBold;
+caption.title p.table.header,
+#author,
+#revnumber,
+#revdate,
+#revremark,
+#footer {
+  font-family: TeleNeoExtraBold;
 }
 
-  #toc a {
-      border-bottom: 1px dotted #999999;
-      color: #3A3A4D !important;
-      text-decoration: none !important;
-  }
-  #toc a:hover {
-      border-bottom: 1px solid #6D4100;
-      color: #6D4100 !important;
-      text-decoration: none !important;
-  }
-  a { color: #666688; text-decoration: none; border-bottom: 1px dotted #666688; }
-  a:visited { color: #615FA0; border-bottom: 1px dotted #615FA0; }
-  a:hover { color: #6D4100; border-bottom: 1px solid #6D4100; }
-  
-  em {
-    font-style: italic;
-    color: #444466;
-  }
-  
-  strong {
-    font-weight: bold;
-    color: #444466;
-  }
-  
-  /* #h1, h2, h3, h4, h5, h6 {
+#toc a {
+  border-bottom: 1px dotted #999999;
+  color: #3A3A4D !important;
+  text-decoration: none !important;
+}
+
+#toc a:hover {
+  border-bottom: 1px solid #6D4100;
+  color: #6D4100 !important;
+  text-decoration: none !important;
+}
+
+a {
+  color: #666688;
+  text-decoration: none;
+  border-bottom: 1px dotted #666688;
+}
+
+a:visited {
+  color: #615FA0;
+  border-bottom: 1px dotted #615FA0;
+}
+
+a:hover {
+  color: #6D4100;
+  border-bottom: 1px solid #6D4100;
+}
+
+em {
+  font-style: italic;
+  color: #444466;
+}
+
+strong {
+  font-weight: bold;
+  color: #444466;
+}
+
+/* #h1, h2, h3, h4, h5, h6 {
   #  color: #666688;
   #  margin-bottom: 0.5em;
   #  line-height: 1.3;
@@ -138,357 +162,474 @@ caption.title
   #h2 { padding-top: 0.5em; }
   #h3 { float: left; }
   #h3 + * { clear: left; } */
-  
-  div.sectionbody {
-    margin-left: 0;
-  }
-  
-  hr {
-    border: 1px solid #444466;
-  }
-  
-  p {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
-  
-  ul, ol, li > p {
-    margin-top: 0;
-  }
-  
-  pre {
-    background-color: #CCCCCC;
-    color: telegray90;
-    padding: 0;
-    margin: 0;
-  }
-  
-  #author {
-    color: #444466;
-    font-weight: bold;
-    font-size: 1.1em;
-  }
-  
-  #footer {
-    font-size: small;
-    border-top: 2px solid silver;
-    padding-top: 0.5em;
-    margin-top: 4.0em;
-  }
-  
-  #footer-text {
-    float: left;
-    padding-bottom: 0.5em;
-  }
-  
-  #footer-badges {
-    float: right;
-    padding-bottom: 0.5em;
-  }
-  
-  #preamble {
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-  }
-  
-  div.tableblock, div.imageblock, div.exampleblock, div.verseblock,
-  div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
-  div.admonitionblock {
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-  }
-  
-  div.admonitionblock {
-    margin-top: 2.5em;
-    margin-bottom: 2.5em;
-  }
-  
-  div.content { /* Block element content. */
-    padding: 0;
-  }
-  
-  /* Block element titles. */
-  div.title, caption.title {
-    color: #444466;
-    font-weight: bold;
-    text-align: left;
-    margin-top: 1.0em;
-    margin-bottom: 0.5em;
-  }
-  div.title + * {
-    margin-top: 0;
-  }
-  
-  td div.title:first-child {
-    margin-top: 0.0em;
-  }
-  div.content div.title:first-child {
-    margin-top: 0.0em;
-  }
-  div.content + div.title {
-    margin-top: 0.0em;
-  }
-  
-  div.sidebarblock > div.content {
-    background: #ffffee;
-    border: 1px solid silver;
-    padding: 0.5em;
-  }
-  
-  div.listingblock > div.content {
-    border: 1px solid silver;
-    background: #f4f4f4;
-    padding: 0.5em;
-  }
-  
-  div.quoteblock {
-    padding-left: 2.0em;
-    margin-right: 10%;
-  }
-  div.quoteblock > div.attribution {
-    padding-top: 0.5em;
-    text-align: right;
-  }
-  
-  div.verseblock {
-    padding-left: 2.0em;
-    margin-right: 10%;
-  }
-  div.verseblock > pre.content {
-    font-family: inherit;
-  }
-  div.verseblock > div.attribution {
-    padding-top: 0.75em;
-    text-align: left;
-  }
-  /* DEPRECATED: Pre version 8.2.7 verse style literal block. */
-  div.verseblock + div.attribution {
-    text-align: left;
-  }
-  
-  div.admonitionblock .icon {
-    vertical-align: top;
-    font-size: 1.1em;
-    font-weight: bold;
-    text-decoration: underline;
-    color: #444466;
-    padding-right: 0.5em;
-  }
-  div.admonitionblock td.content {
-    padding-left: 0.5em;
-    border-left: 2px solid silver;
-  }
-  
-  div.exampleblock > div.content {
-    border-left: 2px solid silver;
-    padding: 0.5em;
-  }
-  
-  div.imageblock div.content { padding-left: 0; }
-  span.image img { border-style: none; }
-  a.image:visited { color: white; }
-  
-  dl {
-    margin-top: 0.8em;
-    margin-bottom: 0.8em;
-  }
-  dt {
-    margin-top: 0.5em;
-    margin-bottom: 0;
-    font-style: normal;
-    color: #444466;
-  }
-  dd > *:first-child {
-    margin-top: 0.1em;
-  }
-  
-  ul, ol {
-      list-style-position: outside;
-  }
-  ol.arabic {
-    list-style-type: decimal;
-  }
-  ol.loweralpha {
-    list-style-type: lower-alpha;
-  }
-  ol.upperalpha {
-    list-style-type: upper-alpha;
-  }
-  ol.lowerroman {
-    list-style-type: lower-roman;
-  }
-  ol.upperroman {
-    list-style-type: upper-roman;
-  }
-  
-  div.compact ul, div.compact ol,
-  div.compact p, div.compact p,
-  div.compact div, div.compact div {
-    margin-top: 0.1em;
-    margin-bottom: 0.1em;
-  }
 
-  
+div.sectionbody {
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid #444466;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul,
+ol,
+li>p {
+  margin-top: 0;
+}
+
+pre {
+  background-color: #CCCCCC;
+  color: telegray90;
+  padding: 0;
+  margin: 0;
+}
+
+#author {
+  color: #444466;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+#footer {
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+
+#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+
+#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+#preamble {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+div.tableblock,
+div.imageblock,
+div.exampleblock,
+div.verseblock,
+div.quoteblock,
+div.literalblock,
+div.listingblock,
+div.sidebarblock,
+div.admonitionblock {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+div.admonitionblock {
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+div.content {
+  /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title,
+caption.title {
+  color: #444466;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+
+div.title+* {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+
+div.content+div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock>div.content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+
+div.listingblock>div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock {
+  padding-left: 2.0em;
+  margin-right: 10%;
+}
+
+div.quoteblock>div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock {
+  padding-left: 2.0em;
+  margin-right: 10%;
+}
+
+div.verseblock>pre.content {
+  font-family: inherit;
+}
+
+div.verseblock>div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock+div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #444466;
+  padding-right: 0.5em;
+}
+
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 2px solid silver;
+}
+
+div.exampleblock>div.content {
+  border-left: 2px solid silver;
+  padding: 0.5em;
+}
+
+div.imageblock div.content {
+  padding-left: 0;
+}
+
+span.image img {
+  border-style: none;
+}
+
+a.image:visited {
+  color: white;
+}
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+  color: #444466;
+}
+
+dd>*:first-child {
+  margin-top: 0.1em;
+}
+
+ul,
+ol {
+  list-style-position: outside;
+}
+
+ol.arabic {
+  list-style-type: decimal;
+}
+
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+
+ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+
+ol.lowerroman {
+  list-style-type: lower-roman;
+}
+
+ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+div.compact ul,
+div.compact ol,
+div.compact p,
+div.compact p,
+div.compact div,
+div.compact div {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+
 table {
-
   border: 0px;
-  margin-bottom:0;
+  border-collapse: collapse;
+  margin-bottom: 0;
 }
 
 table thead tr th,
 table thead tr td,
 table tfoot tr th,
-table tfoot tr td  {
+table tfoot tr td {}
+
+
+
+table td {
+  border-bottom: 1px solid var(--tele-light-shade);
+  border-collapse: collapse;
+}
+table th {
+  border-bottom: 1px solid var(--tele-light-shade);
 }
 
 
-table tbody tr td,
-table tr td {
-  border: 0px;
-  border-bottom: 1px;
-}
 
-  
-
-div.tableblock > table {
-  border: 1px;
-  font-family: TeleNeoRegular;
-  font-size: 8pt;
+div.tableblock>table {
   background: var(--tele-white);
   color: var(--tele-text-color);
   line-height: 0.9;
 }
+
 /* Because the table frame attribute is overriden by CSS in most browsers. */
-div.tableblock > table[frame="void"] {
-  align-content: left;
-  border-style: none;
+div.tableblock>table[frame="void"] {
+  /* align-content: left; */
+  border: none;
 }
-div.tableblock > table[frame="hsides"] {
-  border-left-style: none;
-  border-right-style: none;
+
+div.tableblock>table[frame="hsides"] {
+  border-left: none;
+  border-right: none;
 }
-div.tableblock > table[frame="vsides"] {
-  border-top-style: none;
-  border-bottom-style: none;
+
+div.tableblock>table[frame="vsides"] {
+  border-top: none;
+  border-bottom: none;
 }
 
 thead {
-  border-left-style: none;
-  border-right-style: none;
-  border-bottom-style: 2px;
-  border-color: var(--tele-medium-shade);
   color: var(--tele-primary-color);
   font-family: TeleNeoMedium;
+  font-size: 8pt;
 }
+
+tbody {
+  color: var(--tele-text-color);
+  font-family: TeleNeoRegular;
+  font-size: 8pt;
+}
+
 tfoot {
-  border-left-style: none;
-  border-right-style: none;
-  border-bottom-style: 2px;
-  border-color: var(--tele-medium-shade);
   color: var(--tele-primary-color);
   font-family: TeleNeoMedium;
+  font-size: 8pt;
 }
-td > div.verse {
+
+td>div.verse {
   white-space: pre;
 }
+
 p.table {
   margin-top: 0;
 }
 
-  
-  
-  div.hdlist {
-    margin-top: 0.8em;
-    margin-bottom: 0.8em;
+/**
+ * Table alignment hints from asciidoc
+ */
+th.tableblock.halign-left,
+td.tableblock.halign-left {
+  text-align: left;
+}
+
+th.tableblock.halign-center,
+td.tableblock.halign-center {
+  text-align: center;
+}
+
+th.tableblock.halign-right,
+td.tableblock.halign-right {
+  text-align: right;
+}
+
+th.tableblock.valign-top,
+td.tableblock.valign-top {
+  vertical-align: top;
+}
+
+th.tableblock.valign-middle,
+td.tableblock.valign-middle {
+  vertical-align: middle;
+}
+
+th.tableblock.valign-bottom,
+td.tableblock.valign-bottom {
+  vertical-align: bottom;
+}
+
+div.hdlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+div.hdlist tr {
+  padding-bottom: 15px;
+}
+
+dt.hdlist1.strong,
+td.hdlist1.strong {
+  font-weight: bold;
+}
+
+td.hdlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+  color: #444466;
+}
+
+td.hdlist2 {
+  vertical-align: top;
+}
+
+div.hdlist.compact tr {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.comment {
+  background: yellow;
+}
+
+@media print {
+  #footer-badges {
+    display: none;
   }
-  div.hdlist tr {
-    padding-bottom: 15px;
-  }
-  dt.hdlist1.strong, td.hdlist1.strong {
-    font-weight: bold;
-  }
-  td.hdlist1 {
-    vertical-align: top;
-    font-style: normal;
-    padding-right: 0.8em;
-    color: #444466;
-  }
-  td.hdlist2 {
-    vertical-align: top;
-  }
-  div.hdlist.compact tr {
-    margin: 0;
-    padding-bottom: 0;
-  }
-  
-  .comment {
-    background: yellow;
-  }
-  
-  @media print {
-    #footer-badges { display: none; }
-  }
-  
-  #toctitle {
-    color: #666688;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-top: 1.0em;
-    margin-bottom: 0.1em;
-  }
-  
-  div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 { margin-top: 0; margin-bottom: 0; }
-  div.toclevel1 { margin-top: 0.3em; margin-left: 0; font-size: 1.0em; }
-  div.toclevel2 { margin-top: 0.25em; margin-left: 2em; font-size: 0.9em; }
-  div.toclevel3 { margin-left: 4em; font-size: 0.8em; }
-  div.toclevel4 { margin-left: 6em; font-size: 0.8em; }
-  
-  .monospaced, tt, div.listingblock > div.content {
-    font-family:  Consolas, "Andale Mono", "Courier New", monospace;
-    color: #004400;
-    background: #f4f4f4;
-    max-width: 80em;
-    line-height: 1.2em;
-  }
-  
-  .paragraph p  {
-    line-height: 1.5em;
-    margin-top: 1em;
-  }
-  
-  .paragraph p, li, dd, .content { max-width: 45em; }
-  .admonitionblock               { max-width: 35em; }
-  
-  div.sectionbody div.ulist > ul > li {
-    list-style-type: square;
-    color: #aaa;
-  }
-    div.sectionbody div.ulist >  ul > li > * {
-      color: black;
-      /*font-size: 50%;*/
-    }
-  
-  
-  div.sectionbody div.ulist > ul > li div.ulist > ul > li {
-    color: #ccd ;
-  }
-    div.sectionbody div.ulist > ul > li div.ulist > ul > li > * {
-      color: black ;
-    }
-  
-  em {
-    font-style: normal ! important;
-    font-weight: bold ! important;
-    color: #662222   ! important;
-    letter-spacing:+0.08em ! important;
-  }
-  
-  
-  /*
+}
+
+#toctitle {
+  color: #666688;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel1,
+div.toclevel2,
+div.toclevel3,
+div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+div.toclevel1 {
+  margin-top: 0.3em;
+  margin-left: 0;
+  font-size: 1.0em;
+}
+
+div.toclevel2 {
+  margin-top: 0.25em;
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.8em;
+}
+
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.8em;
+}
+
+.monospaced,
+tt,
+div.listingblock>div.content {
+  font-family: Consolas, "Andale Mono", "Courier New", monospace;
+  color: #004400;
+  background: #f4f4f4;
+  max-width: 80em;
+  line-height: 1.2em;
+}
+
+.paragraph p {
+  line-height: 1.5em;
+  margin-top: 1em;
+}
+
+.paragraph p,
+li,
+dd,
+.content {
+  max-width: 45em;
+}
+
+.admonitionblock {
+  max-width: 35em;
+}
+
+div.sectionbody div.ulist>ul>li {
+  list-style-type: square;
+  color: #aaa;
+}
+
+div.sectionbody div.ulist>ul>li>* {
+  color: black;
+  /*font-size: 50%;*/
+}
+
+
+div.sectionbody div.ulist>ul>li div.ulist>ul>li {
+  color: #ccd;
+}
+
+div.sectionbody div.ulist>ul>li div.ulist>ul>li>* {
+  color: black;
+}
+
+em {
+  font-style: normal ! important;
+  font-weight: bold ! important;
+  color: #662222 ! important;
+  letter-spacing: +0.08em ! important;
+}
+
+
+/*
    * html5 specific
    *
    * */
-  /*
+/*
   table.tableblock {
     margin-top: 1.0em;
     margin-bottom: 1.5em;
@@ -525,25 +666,4 @@ p.table {
   table.tableblock.frame-none {
     border-style: hidden;
   }
-  
-  th.tableblock.halign-left, td.tableblock.halign-left {
-    text-align: left;
-  }
-  th.tableblock.halign-center, td.tableblock.halign-center {
-    text-align: center;
-  }
-  th.tableblock.halign-right, td.tableblock.halign-right {
-    text-align: right;
-  }
-  
-  th.tableblock.valign-top, td.tableblock.valign-top {
-    vertical-align: top;
-  }
-  th.tableblock.valign-middle, td.tableblock.valign-middle {
-    vertical-align: middle;
-  }
-  th.tableblock.valign-bottom, td.tableblock.valign-bottom {
-    vertical-align: bottom;
-  }
   */
-  
