@@ -1,4 +1,7 @@
-// GitHub at al. ear a Readme as top level doc
-// and display it only when navigating to the project
-// We can simply include our toplevel document
+:linkcss:
+:stylesheet: telefluid.css
+:stylesdir: themes/telefluid
+//endif::[]
+:imagesdir: images
+
 include::src/en/architecture-book.adoc[]
