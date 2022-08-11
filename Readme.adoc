@@ -4,4 +4,4 @@
 //endif::[]
 :imagesdir: images
 
-include::src/en/architecture-book.adoc[]
+include::src/en/architecture-book.adoc[See Architecture Book here]
