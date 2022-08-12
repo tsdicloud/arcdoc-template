@@ -60,6 +60,9 @@
   --tele-white: var(--telewhite);
 }
 
+/**
+ * General layout
+ */
 
 /* Default font. */
 body {
@@ -67,10 +70,112 @@ body {
   font-size: 11pt;
   color: var(--tele-text-color);
   line-height: 1.25;
-  background-color: var(--telewhite);
+  background-color: var(--tele-white);
+  scrollbar-color: var(--tele-white) var(--tele-primary-color);
+  margin: 0px;
+  padding: 0px;
 }
 
-h1,
+#header {
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--tele-primary-color);
+}
+
+/* Title font. */
+caption.title p.table.header,
+#author,
+#revnumber,
+#revdate,
+#revremark {
+  font-family: TeleNeoMedium;
+  font-size: 8pt;
+}
+
+div.details {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: var(--telewhite);
+  padding: 0.5em 0.5em 0px 0.5em;
+  margin: 0px;
+}
+
+#toc {
+  background-color: var(--telewhite);
+  padding: 0.5em;
+  margin: 0px 0px 4px 0px;
+}
+
+#content {
+  /* Block element content. */
+  border-radius: 8px;
+  background-color: var(--telewhite);
+  padding: 0.5em;
+}
+
+#footer {
+  background-color: var(--teleblack);
+  margin: 0px;
+  padding: 0px;
+}
+
+#footer-text::before {
+  content: url(T_systems_logo_rgb_n.svg);
+  display: block;
+  float:left;
+  padding: 0.5em 2em 0.3em 1em;
+  overflow: hidden;
+  width: 100pt; 
+  /* width: 10%;
+  height: 10%; */
+  white-space: nowrap;
+}
+
+#footer-text {
+  padding: 0.5em 0em;
+  font-size: small;
+  font-family: TeleNeoMedium;
+  font-size: 8pt;
+  background-color: var(--teleblack);
+  color: var(--tele-white);
+  vertical-align: middle;
+}
+
+/*
+#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+*/
+
+/**
+ * Layout of element
+ */
+h1 {
+  display: inline-block;
+  height: 48px;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden; 
+  font-family: TeleNeoExtraBold;
+  font-size: 14pt;
+  color: var(--tele-white);
+  line-height: 1;
+  vertical-align: middle;
+}
+
+
+h1::before {
+  vertical-align: middle;
+  content: url(T_systems_logo_rgb_n.svg);
+  display: inline-block;
+  float:left;
+  padding: 0.5em 2em 0.3em 1em;
+  overflow: hidden;
+  width: 100pt; 
+  white-space: nowrap;
+}
+
 h2,
 #toctitle {
   font-family: TeleNeoExtraBold;
@@ -100,17 +205,6 @@ div.title {
   font-size: 12.5pt;
   color: var(--tele-dark-shade);
   line-height: 1
-}
-
-
-/* Title font. */
-caption.title p.table.header,
-#author,
-#revnumber,
-#revdate,
-#revremark,
-#footer {
-  font-family: TeleNeoExtraBold;
 }
 
 #toc a {
@@ -174,6 +268,7 @@ hr {
 p {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+  white-space: nowrap;
 }
 
 ul,
@@ -195,23 +290,6 @@ pre {
   font-size: 1.1em;
 }
 
-#footer {
-  font-size: small;
-  border-top: 2px solid silver;
-  padding-top: 0.5em;
-  margin-top: 4.0em;
-}
-
-#footer-text {
-  float: left;
-  padding-bottom: 0.5em;
-}
-
-#footer-badges {
-  float: right;
-  padding-bottom: 0.5em;
-}
-
 #preamble {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
@@ -228,16 +306,12 @@ div.sidebarblock,
 div.admonitionblock {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
+  overflow-wrap: break-word;
 }
 
 div.admonitionblock {
   margin-top: 2.5em;
   margin-bottom: 2.5em;
-}
-
-div.content {
-  /* Block element content. */
-  padding: 0;
 }
 
 /* Block element titles. */
@@ -528,12 +602,6 @@ div.hdlist.compact tr {
   background: yellow;
 }
 
-@media print {
-  #footer-badges {
-    display: none;
-  }
-}
-
 #toctitle {
   color: #666688;
   font-size: 1.2em;
@@ -624,46 +692,11 @@ em {
   letter-spacing: +0.08em ! important;
 }
 
-
-/*
-   * html5 specific
-   *
-   * */
-/*
-  table.tableblock {
-    margin-top: 1.0em;
-    margin-bottom: 1.5em;
+/**
+ * Media print differences
+ */
+@media print {
+  #footer-badges {
+    display: none;
   }
-  thead, p.tableblock.header {
-    font-weight: bold;
-    color: #666688;
-  }
-  p.tableblock {
-    margin-top: 0;
-  }
-  table.tableblock {
-    border-width: 3px;
-    border-spacing: 0px;
-    border-style: solid;
-    border-color: #444466;
-    border-collapse: collapse;
-  }
-  th.tableblock, td.tableblock {
-    border-width: 1px;
-    padding: 4px;
-    border-style: solid;
-    border-color: #444466;
-  }
-  
-  table.tableblock.frame-topbot {
-    border-left-style: hidden;
-    border-right-style: hidden;
-  }
-  table.tableblock.frame-sides {
-    border-top-style: hidden;
-    border-bottom-style: hidden;
-  }
-  table.tableblock.frame-none {
-    border-style: hidden;
-  }
-  */
+}

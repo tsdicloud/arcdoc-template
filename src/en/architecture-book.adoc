@@ -12,7 +12,7 @@ ifdef::backend-html5[]
 endif::[]
 
 // important sequence; don't touch
-= A T-Systems architecture template
+= An IT architecture template
 :doctype: book
 :title-page:
 :toc:

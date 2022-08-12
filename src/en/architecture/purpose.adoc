@@ -6,7 +6,7 @@ architecture specification. It is based on arc42 with some minor restructuring t
 closer to old T-Systems templates (e.g. SE bok) and 
 
 https://docs.arc42.org/home/[It is recommended to profit from all the tips and hints given in <<Arc42>> and consider
-them for your own documentation.] he templates contains also links into the corresponding parts there.
+them for your own documentation.] The template refers to interesting parts there corresponding to the topic.
 
 // this is an example of a complex admonition
 [TIP]
