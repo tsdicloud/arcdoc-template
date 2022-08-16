@@ -43,32 +43,40 @@ page:
   size: A4
 title:
   page:
+    background-image: image::LiquidBrand_3D_shape_5_RGB_p.svg[pdfwidth=90vw,position=center left]
     font-color: $tele-dark-shade
     font-family: TeleNeo
-    font-style: bold_italic
     align: left
     line-height: 1
     logo:
-      image: ../T_systems_logo_rgb_p.svg
+      image: image::T_systems_logo_rgb_n.svg[T-Systems,200]
       align: left
-      top: 95%
+      top: 80%
     title:
       # display: none
-      font-color: $tele-primary-color
+      font-color: $tele-white
+      font-style: bold
       font-size: 36pt
     subtitle:
       # display: none
-      font-size: 26pt
+      font-color: $tele-white
+      font-style: bold_italic
+      font-size: 24pt
     authors:
       display: none
-      font-size: 18pt
+      font-color: $tele-white
+      font-style: bold_italic
+      font-size: 14pt
       content:
         name_only: "{author}"
         with_email: "{author} <{email}>"
     revision:
+      # display: none
       margin-top: 48pt
       # display: none
-      font-size: 18pt
+      font-color: $tele-white
+      font-style: bold_italic
+      font-size: 14pt
       ## delimiter: '\n'
 footer:
   border-style: none
