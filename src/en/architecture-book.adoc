@@ -84,3 +84,10 @@ include::architecture/tools.adoc[]
 [appendix]
 == References
 include::architecture/references.adoc[]
+
+<<<<
+ifdef::backend-pdf[]
+// telefluid requires a dedicated last page with metainfo
+// we do something as close as possible to it
+include::tlastpage.adoc[]
+endif::[]

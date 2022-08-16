@@ -1,0 +1,25 @@
+// a poor mans version of a telefluid last page
+*Contact* +
+{author} +
+{email} +
+{version-label} +
+{revremark} +
+ +
+ +
+ +
+ +
+ +
+ +
+ + 
+ +
+ +
+ +
+ +
+ +
+ +
+ + 
+ +
+ +
+ +
+image:lastfluid.svg[(C) T-Systems International GmbH,float="left",pdfwidth=70%]
+
