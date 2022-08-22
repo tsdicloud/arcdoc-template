@@ -6,11 +6,13 @@ AM::
 
 [horizontal]
 Blue-green-deployments::
-    A concept to replace servers or containers without downtime. It applies exceptionally well in cloud environments.
-    Also known as: red-black deployment, rolling update
-    
+   A concept to replace servers or containers without downtime. It applies exceptionally well in cloud environments.
+   Also known as: red-black deployment, rolling update
++    
+--
 [quote, https://martinfowler.com/books/continuousDelivery.html[Humble et al., Continuous Delivery]]
 The idea is to have two identical versions of your production environment, which we’ll call blue and green... Users of the system are routed to the green environment, which is the currently designated production. We want to release a new version of the application. So we deploy it to the blue environment... This does not in any way affect the operation of the green environment. We can run smoke tests against the blue environment to check it is working properly. When we’re ready, moving to the new version is as simple as changing the router configuration to point to the blue environment instead of the green environment. The blue environment thus becomes production. This switchover can typically be performed in much less than a second. If something goes wrong, we simply switch the router back to the green environment.
+--
 
 [horizontal]
 DTAG::
