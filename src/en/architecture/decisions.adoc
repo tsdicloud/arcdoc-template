@@ -1,5 +1,23 @@
 // == Decision log
+_Architects should document their decisions in a log. decision date should be the first day you base your further work on this (maybe still instable) decision._
+
+_See also https://docs.arc42.org/section-9/[Arc42 Decision log chapter], esp. https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions [*ADR - Architecture Decision Record* ]_
 
 23/10/01::
-Versioning/release concept: Simplified by not using master branch at all. Our trunk is a `myrel/XX.yy.zz` release
-branche.  
+_(Short log example)_ Versioning/release concept: Simplified by not using master branch at all. Our trunk is a `myrel/XX.yy.zz` release
+branch.  
+
+23/11/01::
+_(ADR example)_
+
+.Context
+Administrative information (e.g. passwords) have to be stored where only admins can access it. 
+.Decision
+Team has decided to store the information in an encyprted S3 bucket.
+
+.Status
+Aligned with customer.
+
+.Consequences
+* Team has to migrate information formerly stored in vault.
+* Vault has to be retired.
