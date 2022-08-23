@@ -27,7 +27,7 @@ font:
 tele:
   primary-color: E20074
   secondary-color: 216BFF
-  head-default-color: 999999
+  head-default-color: 666666
   literal-color: 999999
   text-color: 000000
   light-shade: E5E5E5
@@ -107,7 +107,7 @@ base:
     color: $tele-text-color
     family: TeleNeo
     style: normal
-    size: 11
+    size: 10
     line-height: 1.25
 link:
   font-color: $tele-secondary-color
@@ -142,24 +142,18 @@ heading:
 #      style: bold
 #      height: 1
 caption:
-  font:
-    color: $tele-dark-shade
-    size: $base-font-size
-    style: bold
+  background-color: transparent
   line-height: 1
+  font-color: $tele-head-default-color
+  font-size: $base-font-size
+  font-style: bold
 image:
   caption:
-    font:
-      size: 0.8
-      color: $tele-dark-shade
-      style: bold_italic
-    line-height: $caption-font-size
-blockquote:
-  caption:
-    font-color: $tele-dark-shade
-    font-size: $base-font-size
-    style: bold
-    line-height: 1.25
+    background-color: transparent
+    line-height: 0.9
+    font-color: $tele-head-default-color
+    font-size: $base-font-size * 0.8
+    font-style: italic
 literal:
   font-color: $tele-literal-color
   font-size: $base-font-size * 0.8
