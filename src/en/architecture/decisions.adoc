@@ -9,7 +9,8 @@ branch.
 
 23/11/01::
 _(ADR example)_
-
++
+--
 .Context
 Administrative information (e.g. passwords) have to be stored where only admins can access it. 
 .Decision
@@ -21,3 +22,4 @@ Aligned with customer.
 .Consequences
 * Team has to migrate information formerly stored in vault.
 * Vault has to be retired.
+--

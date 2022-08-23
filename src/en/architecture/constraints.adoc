@@ -1,4 +1,3 @@
-=== Constraints
 
 .Efficient scaling(example) [[ref_constraint_1, efficient scaling]]
 The system should automatically scale up/down depending on user traffic (or migration traffic) and avoid resource waste 
