@@ -37,6 +37,12 @@ tele:
   check-color: 187431
   uncheck-color: D82A48
   box-color: FFF4C6
+  link-color: 2238DF
+  # link-hover-color: 0819BD
+  # link-visited-color: 6C3BDB
+  # link-active-color: 000D99
+  light-box: #f7f7f8
+
 page:
   margin-outer: [2.2cm 2.2cm 2.2cm 2.2cm]
   layout: portrait
@@ -110,7 +116,10 @@ base:
     size: 10
     line-height: 1.25
 link:
-  font-color: $tele-secondary-color
+  text-decoration: none
+  font-color: $tele-link-color
+  font-style: bold_italic
+
 heading:
   chapter-break-before: auto
   font:
@@ -135,12 +144,6 @@ heading:
   h6:
     font-color: $tele-head-default-color
     font-size: $base-font-size
-#blocktitle:
-#    font:
-#      color: $tele-text-color
-#      size: $base-font-size
-#      style: bold
-#      height: 1
 caption:
   background-color: transparent
   line-height: 1
@@ -154,9 +157,51 @@ image:
     font-color: $tele-head-default-color
     font-size: $base-font-size * 0.8
     font-style: italic
+
+role:
+  redactional:
+    border-radius: 0
+    border-width: 0
+    font-size: $base-font-size * 0.9
+    font-style: italic
+    background-color: $tele-light-box
+
 literal:
   font-color: $tele-literal-color
   font-size: $base-font-size * 0.8
+code:
+  border-radius: 8
+  border-width: 0
+  base-font-size-min: 0
+  font-size: $base-font-size * 0.8
+  background-color: $tele-light-shade
+code-linenum:
+  font-color: $tele-primary-color
+admonition:
+  border-radius: 8
+  border-width: 0
+  base-font-size-min: 0
+  font-size: $base-font-size * 0.8
+  font-style: italic
+  background-color: $tele-light-box
+  column-rule-color: $tele-primary-color
+  column-rule-style: solid
+  column-rule-width: 4
+  label:
+    font-color: $tele-primary-color
+    vertical-align: middle
+    text-align: center
+  #icon:
+  #  note:
+  #    image:
+  #    size: 20
+  #  tip:
+  #  warning: 
+  #  important:
+  #  caution:
+
+
+
 table:
   background-color: transparent
   font-size: $base-font-size * 0.8
@@ -165,6 +210,7 @@ table:
     font-style: normal
     font-color: $tele-primary-color
     border-bottom-width: 1
+
 description-list:
   font-size: $base-font-size
   font_color: $tele-dark-shade
@@ -194,21 +240,3 @@ ulist:
     content: "\u2715"
     font_color: $tele-uncheck-color
     line-height: 0.6
-code:
-  font-size: $base-font-size * 0.8
-  base-font-size-min: 0
-  background-color: $tele-light-shade
-  border-radius: 0
-  border-width: 0
-  linenum:
-    font-color: $tele-primary-color
-conum:
-  font_color: $tele-primary-color
-
-example:
-  font-family: TeleNeo
-  font-style: normal
-  background-color: $tele-box-color
-  border-radius: 0
-  border-width: 0
- 

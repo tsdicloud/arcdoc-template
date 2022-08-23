@@ -1,6 +1,6 @@
 ==== Authenticity of servers - TLS certificate handling
 TLS certificates have a validity. If the certificate expires and is not exchanged/extended
-before, the system is inavailable. This should not happen.
+before, the system is unavailable. This should not happen.
 
 
 .Observations & metrics
