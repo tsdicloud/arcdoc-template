@@ -25,27 +25,33 @@ include::config.adoc[]
 :numbered:
 :chapter-signifier:
 
+
+
 <<<<
 == Introduction and purpose
 include::architecture/purpose.adoc[]
 
 include::architecture/systemcontext.adoc[]
 
-include::architecture/stakeholders.adoc[]
-
-<<<<
-== Goals and constraints
 include::architecture/goals.adoc[]
 
-include::architecture/constraints.adoc[]
+<<<<
+include::architecture/stakeholders.adoc[]
+
+
+
 
 <<<<
 == Logical building blocks
 //include::architecture/logical/overview.adoc[]
 
+
+
 <<<<
 == System building blocks
 //include::architecture/system/systemdesign.adoc[]
+
+
 
 <<<<
 == Quality scenarios
@@ -60,9 +66,11 @@ include::architecture/quality/functional_suitability.adoc[]
 
 === Usability
 
+<<<<
 === Reliability
 include::architecture/quality/availability_office.adoc[]
 
+<<<<
 === Security
 include::architecture/quality/authenticity_certificates.adoc[]
 
@@ -71,19 +79,30 @@ include::architecture/quality/authenticity_certificates.adoc[]
 === Portability
 
 
-
 <<<<
 == Cross cutting concepts
 //include::architecture/conceptual/release.adoc[]
 
+
+
 <<<<
-== Principles
+== Principle catalog
 include::architecture/principles.adoc[]
+
+
+
+<<<<
+== Constraint catalog
+include::architecture/constraints.adoc[]
+
+
 
 <<<<
 == Risks and debts
 // Collection of (current) technical debts
 include::architecture/riskdebt.adoc[]
+
+
 
 <<<<
 == Decision log
