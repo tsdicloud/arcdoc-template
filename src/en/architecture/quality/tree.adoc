@@ -1,0 +1,19 @@
+
+The quality part of the architecture documentation is based on ATAM Quality scenarios and the
+https://iso25000.com/index.php/en/iso-25000-standards/iso-25010[ISO25010 Software Product Quality Model]
+
+.Software Product Quality model
+image::iso25010_en.drawio.svg[System context view]
+
+A *quality tree* structures the ATAM scenarios that apply for the architecture according to the
+Software Product Quality model. The detailed scenarios are documented then in detail in the 
+following chapters. See Arc42 about https://docs.arc42.org/tips/10-4/[usage of a quality tree] and 
+https://docs.arc42.org/tips/1-12/[structure of ATAM scenarios]
+
+
+[TIP]
+====
+Don't nest the chapters too deep as it will confuse the reader.
+We recommend to document all scenarios on document section level 4
+and show nested ree dependencies only in overview graph.
+====

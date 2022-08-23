@@ -1,0 +1,29 @@
+=== Authenticity of servers - TLS certificate handling
+TLS certificates have a validity. If the certificate expires and is not exchanged/extended
+before, the system is inavailable. This should not happen.
+
+
+.Observations & metrics
+* For non-production environments, Let's Encrypt certificates are renewed with each
+  continuous deployment.
+
+* For production, TeleSec certificates are mandatory that automation cannot replace
+  without manual intervention
+
+* TeleSec sends reminder mails early to the support mailboxes.
+
+
+.Quality measures
+* Terraform automation checks certificate validity with each deployment run.
+
+** In case of TeleSec certificates, automation is not possible. Deployment
+   at least checks validity of certificate.
+
+** Production also holds a set of Let's encrypt certificates with different    
+   expiration dates as fallback.
+
+** Let's encrypt certificates, the deployment automatically pulls a new
+   set of  certificates and deploys them.
+
+* TeleSec CA sends expiration email to technical and commercial contacts 
+  (weeks before expiration).

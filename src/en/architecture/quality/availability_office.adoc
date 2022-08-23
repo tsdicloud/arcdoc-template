@@ -1,0 +1,20 @@
+==== Availability during office hours
+The system is always available during office hours (weekdays, 7:00h - 20:00h CET).
+Non-catastrophic, unexpected outages should be fixed within 
+
+
+.Observations & metrics
+* External health checkers:
+  System is inavailable if 80% of the calls drop below the benchmark values. 
+
+
+.Quality measures
+* Major upgrades that require a downtime
+
+* Loadbalancer replaces nodes on unexpected outage
+
+* There is no guarantee to solve every unexpected, non-catastrophic outage within an hour.
+  The incident process is organized so that in general, a fix within one our is possible.
+
+* External health checkers check primary use cases every 5 minutes (see Section ...)
+  for early alarming on outage.

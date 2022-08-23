@@ -1,0 +1,3 @@
+_Most of the documentation in the Logical Building Blocks documents Functional Suitability,
+as well as stories and tickets. Recommendation is to use the Quality section for it only to document special
+safeguarding procedures, certifications and criteria requested by the stakeholders._

@@ -49,7 +49,28 @@ include::architecture/constraints.adoc[]
 
 <<<<
 == Quality scenarios
-//include::architecture/quality/maintainability_supported_releases.adoc[]
+include::architecture/quality/tree.adoc[]
+
+=== Functional Suitability
+include::architecture/quality/functional_suitability.adoc[]
+
+=== Performance/efficiency
+
+=== Compatibility
+
+=== Usability
+
+=== Reliability
+include::architecture/quality/availability_office.adoc[]
+
+=== Security
+include::architecture/quality/authenticity_certificates.adoc[]
+
+=== Maintainability
+
+=== Portability
+
+
 
 <<<<
 == Cross cutting concepts
