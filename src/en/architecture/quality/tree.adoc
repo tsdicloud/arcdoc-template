@@ -11,4 +11,4 @@ following chapters. See Arc42 about https://docs.arc42.org/tips/10-4/[usage of a
 https://docs.arc42.org/tips/1-12/[structure of ATAM scenarios]#
 
 #Don't nest the chapters too deep as it will confuse the reader. We recommend to document all scenarios on document
-section level 4 and show nested ree dependencies only in overview graph.#
+section level 3 and show deeper nested dependencies only in overview tree graph.#

@@ -1,0 +1,61 @@
+#The logical building blocks are best described in a hierarchical manner, aka.
+https://docs.arc42.org/section-5/[blockbox/whitebox] approach, see Arc42 
+https://docs.arc42.org/section-5/.#
+
+=== Business Capabilities
+#(example)#
+
+image::capabilities_en.drawio.svg[Capabilities view]
+
+[vertical]
+Business Capability PartnerSelection::
+The IT systems are capable of handling applications and evaluations of partners.
+The responsibility extends to caring of the customers until final dissolving of
+partnership.
+Business Function PartnerCare:::
+The IT systems for buying organisation handle the complete lifecycle of the
+partner relationship apart from the technological fit.
+Business Function PartnerAssessment:::
+The IT systems realizing this function contain procedures and benchmarks to assess
+efficiency and effectiveness of partners. Partnering requires mandatory a positive
+assessment fro production.
+Business Capability SolutionDelivery::
+The capability subsumes all tools and procedures for tracking solution delivery in
+time and budget.
+
+
+[TIP]
+====
+People tend to use also of "Management" terms when describing capabilities. The difficulty with this
+term is that it does not reflect well what the business domain really does. We recommend to avoid "Management"
+whenever possible. a good naming convention is `<Subject><Handling verb as substantivation>` 
+====
+
+<<<<
+=== Services
+#(example, blackbox)#
+
+#The service view shows the covered business capabilities and the mapping to services.
+It is strongly based on Domain-driven design concepts.#
+#(example)#
+
+image::services_en.drawio.svg[Domains-Services view]
+
+#Shortly describe your services and what they deliver "at the edge" of the business domain they live in.
+The choice of structure depends on the ubiquitous language of the solution context. Choose short but
+precise statements that seduce the reader to dig deeper into the document and to learn more.#
+
+#About blackbox view: Imagine you describe a car by its outside look and capabilities you request from your car.#
+
+==== Service PartnerCare 
+#(example, 1st level whitebox)#
+
+#Each following section strongly resembles the way "building architects" make detail construction sketches. Also feel
+free to add other views on the logical parts of your design like process flows, sequence diagrams.#
+
+#About whitebox view: Imagine you want to understand better what makes your car driving and you open the front trunk
+of your car with the motor. You can now see the basic parts a motor is composed of, but some parts are still blackbox
+and need deeper deconstruction. This leads to different levels of detail on deconstruction."#
+
+#The further format is left to the reader. Again, choose wisely to describe stable building blocks your stakeholder
+can understand. Prefer stable blueprints over coding details that may change over time!#

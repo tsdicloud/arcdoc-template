@@ -44,7 +44,7 @@ include::architecture/stakeholders.adoc[]
 <<<<
 == Logical building blocks
 //include::architecture/logical/overview.adoc[]
-
+include::architecture/logical/services.adoc[]
 
 
 <<<<
