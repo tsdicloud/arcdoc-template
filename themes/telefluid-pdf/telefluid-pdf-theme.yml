@@ -41,7 +41,8 @@ tele:
   # link-hover-color: 0819BD
   # link-visited-color: 6C3BDB
   # link-active-color: 000D99
-  light-box: #f7f7f8
+  light-box-color: #f7f7f8
+  redact-color: #7d94f9
 
 page:
   margin-outer: [2.2cm 2.2cm 2.2cm 2.2cm]
@@ -158,14 +159,6 @@ image:
     font-size: $base-font-size * 0.8
     font-style: italic
 
-role:
-  redactional:
-    border-radius: 0
-    border-width: 0
-    font-size: $base-font-size * 0.9
-    font-style: italic
-    background-color: $tele-light-box
-
 literal:
   font-color: $tele-literal-color
   font-size: $base-font-size * 0.8
@@ -177,13 +170,14 @@ code:
   background-color: $tele-light-shade
 code-linenum:
   font-color: $tele-primary-color
+
 admonition:
   border-radius: 8
   border-width: 0
   base-font-size-min: 0
   font-size: $base-font-size * 0.8
   font-style: italic
-  background-color: $tele-light-box
+  background-color: $tele-light-box-color
   column-rule-color: $tele-primary-color
   column-rule-style: solid
   column-rule-width: 4
@@ -199,8 +193,6 @@ admonition:
   #  warning: 
   #  important:
   #  caution:
-
-
 
 table:
   background-color: transparent
@@ -240,3 +232,12 @@ ulist:
     content: "\u2715"
     font_color: $tele-uncheck-color
     line-height: 0.6
+
+role:
+  redact:
+    border-radius: 0
+    border-width: 0
+    font-size: $base-font-size * 0.9
+    font-style: italic
+    font-color: $tele-redact-color
+    # background-color: $tele-light-box-color

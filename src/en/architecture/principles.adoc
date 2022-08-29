@@ -1,5 +1,5 @@
 
-// == Principles
+// == Principles catalog
 
 ////
 There are a lot of guidelines set during the implementation of the architecture that guide

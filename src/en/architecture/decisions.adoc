@@ -1,7 +1,7 @@
 // == Decision log
-_Architects should document their decisions in a log. decision date should be the first day you base your further work on this (maybe still instable) decision._
+#Architects should document their decisions in a log. decision date should be the first day you base your further work on this (maybe still instable) decision.#
 
-_See also https://docs.arc42.org/section-9/[Arc42 Decision log chapter], esp. https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions [*ADR - Architecture Decision Record* ]_
+#See also https://docs.arc42.org/section-9/[Arc42 Decision log chapter], esp. https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions [*ADR - Architecture Decision Record* ]#
 
 23/10/01::
 _(Short log example)_ Versioning/release concept: Simplified by not using master branch at all. Our trunk is a `myrel/XX.yy.zz` release

@@ -1,15 +1,14 @@
 // == Purpose
 The purpose of this digital design is ...
 
-[.redactional]
-****
-The purpose of this template is to give you a jumpstart point for a good and administrable
-architecture specification. It is based on arc42 with some minor restructuring to bring it
-closer to old T-Systems templates (e.g. SE bok).
+#Redactional recommendation and help for the templated is "yellow markered". Please remove from your final doc.#
 
-https://docs.arc42.org/home/[It is recommended to profit from all the tips and hints given in <<Arc42>> and consider
-them for your own documentation.] The template refers to interesting parts there corresponding to the topic.
-****
+#The purpose of this template is to give you a jumpstart point for a good and adaptable
+architecture specification. It is based on arc42 with some minor restructuring to bring it
+closer to old T-Systems templates (e.g. SE bok). https://docs.arc42.org/home/[It is recommended to profit from all the
+tips and hints given in <<Arc42>> and consider them for your own documentation.] The template refers to interesting 
+parts there corresponding to the topic.#
+
 
 // this is an example of a complex admonition
 [TIP]

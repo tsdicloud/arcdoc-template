@@ -3,13 +3,13 @@
 ==== System roles
 
 .BusinessAdmin
-<Role decription without concrete person yet, persona style>
+#<Role decription without concrete person yet, persona style>#
 
 .ExploringUser
-<Role decription without concrete person yet, persona style>
+#<Role decription without concrete person yet, persona style>#
 
 .IntegrationPartner
-<Role decription without concrete person yet, persona style>
+#<Role decription without concrete person yet, persona style>#
 
 ==== Integration partners
 
