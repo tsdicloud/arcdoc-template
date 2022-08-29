@@ -6,7 +6,7 @@
 {revremark} +
 Last modified: {localdate} +
  +
- +
+Based upon https://docs.arc42.org/home/[Arc42 at https://docs.arc42.org/home/].
  +
  +
  +

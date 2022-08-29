@@ -4,11 +4,11 @@
 #See also https://docs.arc42.org/section-9/[Arc42 Decision log chapter], esp. https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions [*ADR - Architecture Decision Record* ]#
 
 23/10/01::
-_(Short log example)_ Versioning/release concept: Simplified by not using master branch at all. Our trunk is a `myrel/XX.yy.zz` release
+#(Short log example)# Versioning/release concept: Simplified by not using master branch at all. Our trunk is a `myrel/XX.yy.zz` release
 branch.  
 
 23/11/01::
-_(ADR example)_
+#(ADR example)#
 +
 --
 .Context
