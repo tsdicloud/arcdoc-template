@@ -3,7 +3,7 @@
 https://iso25000.com/index.php/en/iso-25000-standards/iso-25010[ISO25010 Software Product Quality Model]#
 
 .Software Product Quality model
-image::iso25010_en.drawio.svg[System context view]
+image::iso25010_en.drawio.svg[ISO quality model]
 
 #A *quality tree* structures the ATAM scenarios that apply for the architecture according to the
 Software Product Quality model. The detailed scenarios are documented then in detail in the 
@@ -12,3 +12,5 @@ https://docs.arc42.org/tips/1-12/[structure of ATAM scenarios]#
 
 #Don't nest the chapters too deep as it will confuse the reader. We recommend to document all scenarios on document
 section level 3 and show deeper nested dependencies only in overview tree graph.#
+
+image::qualitytree_en.drawio.svg[Example quality tree]
