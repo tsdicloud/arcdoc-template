@@ -1,30 +1,27 @@
-// where are images located?
-// this is relative to the top-level adoc template
-
-:imagesdir: ../../images
-
 // asciidoctor pdf generation
 :toc:
 
-// asciidoctor html generation
-ifdef::backend-html5[]
-:linkcss:
-:stylesheet: telefluid.css
-:stylesdir: ../../themes/telefluid
+// asciidoc settings for DE
+// ==================================
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+ifndef::env-github[]
+:tip-caption: Hinweis
+:note-caption: Notiz
+:important-caption: Wichtig
+:caution-caption: Achtung
+:warning-caption: Warnung
 endif::[]
 
-// asciidoc settings for EN
-// ==================================
-:caution-caption: Attention
-:important-caption: Important
-:note-caption: Note
-:tip-caption: Hint
-:warning-caption: Warning
+:appendix-caption: Anhang
+:example-caption: Beispiel
+:figure-caption: Abbildung
+:!table-caption: Tabelle
 
-:appendix-caption: Appendix
-:example-caption: Example
-:figure-caption: Figure
-:!table-caption: Table
-
-:toc-title: Table of content
+:toc-title: Inhaltsverzeichnis
 

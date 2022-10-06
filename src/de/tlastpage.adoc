@@ -1,12 +1,12 @@
 // a poor mans version of a telefluid last page
-*Contact* +
+*Kontakt* +
 {author} +
 {email} +
 {version-label} +
 {revremark} +
-Last modified: {localdate} +
+Letzte Änderung: {localdate} +
  +
-Based upon https://docs.arc42.org/home/[Arc42 - https://docs.arc42.org/home/]. +
+Basiert auf https://docs.arc42.org/home/[Arc42 - https://docs.arc42.org/home/]. +
  +
  +
  +
