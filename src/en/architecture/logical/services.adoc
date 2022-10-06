@@ -1,5 +1,5 @@
 #The logical building blocks are best described in a hierarchical manner, aka.
-https://docs.arc42.org/section-5/[blockbox/whitebox] approach, see Arc42 
+https://docs.arc42.org/section-5/[blackbox/whitebox] approach, see Arc42 
 https://docs.arc42.org/section-5/.#
 
 === Business Capabilities
@@ -26,9 +26,10 @@ time and budget.
 
 [TIP]
 ====
-People tend to use also of "Management" terms when describing capabilities. The difficulty with this
-term is that it does not reflect well what the business domain really does. We recommend to avoid "Management"
-whenever possible. a good naming convention is `<Subject><Handling verb as substantivation>` 
+People tend to use the term "Management" excessively when describing capabilities. The difficulty with this
+term is that it does not reflect well what the business domain really does. For example, in Tennis sports,
+you talk about "ForehandShot" as capability and not "YellowballOpenhandManagement" We recommend to avoid 
+"Management" term whenever possible. A good naming convention is `<Forehand=Object><Shot=Action verb as substantivation>` 
 ====
 
 <<<<
@@ -45,7 +46,11 @@ image::services_en.drawio.svg[Domains-Services view]
 The choice of structure depends on the ubiquitous language of the solution context. Choose short but
 precise statements that seduce the reader to dig deeper into the document and to learn more.#
 
-#About blackbox view: Imagine you describe a car by its outside look and capabilities you request from your car.#
+.#Blackbox view metaphore# 
+#Imagine you describe a car by its outside look and capabilities you request from your car.
+See also https://docs.arc42.org/tips/5-2/#
+
+
 
 ==== Service PartnerCare 
 #(example, 1st level whitebox)#
@@ -53,9 +58,18 @@ precise statements that seduce the reader to dig deeper into the document and to
 #Each following section strongly resembles the way "building architects" make detail construction sketches. Also feel
 free to add other views on the logical parts of your design like process flows, sequence diagrams.#
 
-#About whitebox view: Imagine you want to understand better what makes your car driving and you open the front trunk
+.#Whitebox view metaphore#
+#Imagine you want to understand better what makes your car driving and you open the front trunk
 of your car with the motor. You can now see the basic parts a motor is composed of, but some parts are still blackbox
-and need deeper deconstruction. This leads to different levels of detail on deconstruction."#
+and need deeper deconstruction. This leads to different levels of detail on deconstruction.#
 
 #The further format is left to the reader. Again, choose wisely to describe stable building blocks your stakeholder
 can understand. Prefer stable blueprints over coding details that may change over time!#
+
+.#Steer with principles#
+#If a concept sticks to a principle, you can either put a "copy by word" or a reference in the text as in the following
+examples#
+
+We stick to xref:#ref_12factor[] and introduce the following new principle:
+
+include::../principles.adoc[tags=p_agnosticimg]
