@@ -1,0 +1,10 @@
+=== Installation/orchestration
+
+#There are many ways to describe the installed software stack. Arc42 recommends UML deployment diagrams,
+but a simple table with versions numbers can also do. In times of containers, the ultimate truth is
+located in the container descriptions (`Dockerfile`). Again, as brittle information, it is recommended
+to avoid brittle information in concept and better refer to the ultimate truth on your automation repo.#
+
+#If it is not possible to avoid a conceptual summary of the installed software, inclusion of `Dockerfile` code
+or generative extraction by AsciiDoc scripting is an option. Also, the use of tools that compute all (OpenSource)
+dependencies could be helpful to avoid manual work.#
