@@ -1,0 +1,49 @@
+=== Environments
+
+The system are installed on ExampleCloud:
+[horizontal]
+Region::
+    `eu-de`
+Domain::
+    `xxxx`
+
+Each environment are realized as project and so maximally isolated against each other.
+
+.Staging environments
+[cols="1,1",grid="rows",options="header",frame="none"]
+|====
+2+h|
+2+h|Development/Continuous Integration <link to env configuration on git repo>
+h|Endpoint
+h|Purpose
+
+|DNS: `www.my.development`
+| Developer/tester web traffic
+
+|IP: `80.90.100.101`
+| Jumphost
+
+2+h|
+2+h|Pre-production <link to env configuration on git repo> 
+h|Endpoint
+h|Purpose
+
+|DNS: `www.my.preprod`
+| Tester web traffic
+
+|IP: `80.90.101.100`
+| Jumphost
+
+2+h|
+2+h|Production <link to env configuration on git repo> 
+h|Endpoint
+h|Purpose
+
+|DNS: `my.product` +
+DNS: `www.my.product`
+| Customer web traffic
+
+|IP: `90.80.77.66`
+| Jumphost
+
+|====

@@ -1,0 +1,152 @@
+#The nature of system designs is as diverse as software design. There is no
+mandatory "one fits all" structure. Arc42 is sparse in the context of system architecture.
+Thus, you find here the example for a minimal set of informations that is essential useful 
+also for an internal security approval.#
+
+#Be aware that some information in system design is brittle and may lead to excessive efforts for
+frequent updates of the architecture doc to keep it up to date (e.g. used software versions). It is recommended
+to either include an externally generated files or use AsciiDoc scripting to extract the current state
+from system or automation instead of manual updates.#
+
+#Installation manuals are not part of architecture design and -if needed at all- should be done in operations
+documentation.#
+
+=== System design
+
+.System structure
+image::systemenvironment_en.drawio.svg[Example clous system overview]
+
+==== System parts
+
+.System parts
+[cols="2m,2d,1d,3d",grid="rows",options="header",frame="none"]
+|====
+| System part
+| Purpose
+| Cloud service
+| Constraints
+
+| php-env-elasticsearch
+| Log management
+| Cloud Search
+| filled up by `filebeat` from all nodes
+
+| php-env-jumphost
+| Admin jumphost
+| Compute
+| exclusive admin access point to nodes
+
+| ...
+| .
+| .
+|====
+
+All services (except admin services) are *geo-redundant available* in
+
+[square]
+- Availability zone AZ3: Biere (primary)
+
+- Availability zone AZ2: Magdeburg
+
+*Geo-redundancy* contributes to availability and xref:goals.adoc#ref_goal_scaling[].
+
+The *use of PaaS services wherever possible* contributes to xref:goals.adoc#ref_goal_run[] because the availability 
+and the functionality of the service is safeguarded by the cloud provider and own system operation team could focus on
+convenience parts of the system.
+
+<<<<
+==== Security structures: zones and groups
+
+For detailed configuration, see <your automation repo>.
+
+.Security groups 
+[cols="2,2,4",grid="rows",options="header",frame="none"]
+|====
+|
+|Security group
+|Restrictions
+
+.3+|Admin zone
+|`ph-prod1-jumphost-sg`
+|ssh access to jumpserver only
+
+|`php-prod1-elasticsearch-sg`
+|restrict filebeats only from application nodes
+
+|...
+|
+
+.3+|DMZ zone
+|(none)
+|secured by ELB configuration (listener ports ) and Anti-DDoS configuration for IP
+
+.3+|Application zone
+|...
+|
+
+.3+|Database zone
+|...
+|
+
+.2+|Storage zone
+|...
+|
+
+|====
+<<<<
+==== Communication structure / matrices
+
+===== Internet endpoints
+...
+
+===== Admin to env
+#Apart from communication diagrams, communication matrices could be very handy for the compact description
+of communication relationships. Consider to genereate the matrices directly from the installed system e.g
+by a cloud api or a scanning tool.#
+
+Admin zone and backend zone are located in different VPCs and connected by a peering. This design imitates the functionality of an 'administration drawbridge': If no administration is needed, admins could remove the peering which removes any possibility to SSH into the env. In this mode of operation, the drawbridge is only created on demand.
+
+.Administrative communication
+[grid="rows",options="header",frame="none"]
+|====
+||`elastic search`|`node`|`cron-node`|`meta-rds`|`cache-dcs`|`session-cache-dcs`|`tfstate-bucket`| CLOUD API
+|`jumphost` 
+|
+|SSH
+|SSH
+|MySQLS
+|REDIS
+|REDIS
+|TLS1.2
+|TLS1.2
+
+|`node`
+|FBEAT
+|
+|
+|
+|
+|
+|
+|
+
+|`cron-node`
+|FBEAT
+|
+|
+|
+|
+|
+|
+|
+|====
+
+===== DMZ to application zone
+...
+
+===== Application zone to database zone and storage
+...
+
+===== Telekom Intranet endpoints
+None.
+

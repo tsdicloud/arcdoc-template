@@ -65,11 +65,3 @@ and need deeper deconstruction. This leads to different levels of detail on deco
 
 #The further format is left to the reader. Again, choose wisely to describe stable building blocks your stakeholder
 can understand. Prefer stable blueprints over coding details that may change over time!#
-
-.#Steer with principles#
-#If a concept sticks to a principle, you can either put a "copy by word" or a reference in the text as in the following
-examples#
-
-We stick to xref:#ref_12factor[] and introduce the following new principle:
-
-include::../principles.adoc[tags=p_agnosticimg]
