@@ -1,10 +1,12 @@
 === Architecture quality goals
 
-.Efficient scaling(example) [[ref_goal_scaling, efficient scaling]]
+ [[ref_goal_scaling, efficient scaling]]
+.Efficient scaling(example)
 The system should automatically scale up/down depending on user traffic (or migration traffic) and avoid resource waste
 ("no idle infrastructure"). This is mandatory to fulfil the commercial goals of the re-purchase. 
 
-.Minimal run efforts(example) [[ref_goal_run, minimal run efforts]]
+ [[ref_goal_run, minimal run efforts]]
+.Minimal run efforts(example)
 Deployment and run mechanisms are automated so that lifecycle management of the application gets regular business.
 Server-side security patches are rolled out potentially every week, patches and minor releases don´t need downtimes.
 New major releases including new features in all client apps are planned 4 times a year and should follow NextCloud
