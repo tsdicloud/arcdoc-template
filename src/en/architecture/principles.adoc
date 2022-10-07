@@ -6,7 +6,7 @@ what to do and what not. A list of these principles is usually not available.
 We improve this by gathering all principles here, as well as tag and xref them.
 You can either include the principle by word at your current text position
 by `include::../principles.adoc[tags=p_tagname]` or reference it
-by `xref:#p_tagname[]`# 
+by `\xref:#p_tagname[]`# 
 
 
 [[ref_12factor, 12-factor app]] 
@@ -21,3 +21,11 @@ Stage-agnostic images::
     (Server) images are environment-agnostic. They are packed once and used unchanged in all environments along the
     staging chain.
 // end::p_agnosticimg[]
+
+[TIP]
+.#Steer with principles#
+#If a concept sticks to a principle, you can either put a "copy by word" or a reference in the text as in the following examples#
+
+(Example)We stick to xref:#ref_12factor[] and introduce the following new principle:
+
+include::principles.adoc[tags=p_agnosticimg]
