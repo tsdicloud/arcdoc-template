@@ -1,0 +1,45 @@
+#This is an example for a small, cross-cutting concern concept#
+
+=== Data at-rest encryption (example)
+All data stores are encrypted at rest except distributed caches with platform-protected, non-readable private keys
+stored in a hardware security module. 
+
+Distributed caches only contain technical information to enable full horizontal xref:goals.adoc#ref_goal_scaling[]
+which does not mandatory require at-rest encryption to keep confidentiality. Note that in contrast, log management
+information is fully encrapted at rest.
+
+
+.Encryptions and keys 
+[cols="4,4,2,2",grid="rows",options="header",frame="none"]
+|====
+|Storage
+|KMS key
+|Type
+|Project
+
+|`env-meta-rds`
+|`env-database-kms`
+|Storage, 
+|`eu-de_env`
+
+|`env-docs`
+|`env-s3-kms`
+|Bucket, 
+|`eu-de`
+
+|`env-elasticsearch`
+|`env-elasticsearch-kms`
+|Storage, 
+|`eu-de_env`
+
+|`prod1-tfstate-bucket`
+|`env-tfstate-bucket-key`
+|S3 KMS, 
+|`eu-de`
+|====
+
+The system consequently uses Key Management Service (KMS) where keys are held safe and non-readable in HSMs. 
+The keys are only accessible by a technical platform user whose username/credentials are only know to
+terraform automation user and never directly exposed outside the corresponding environment and to (human)
+admins therein in any other form.
+

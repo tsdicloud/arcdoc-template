@@ -49,14 +49,13 @@ include::architecture/logical/services.adoc[]
 
 <<<<
 == System building blocks
-//include::architecture/system/systemdesign.adoc[]
-
-=== Orchestration
+include::architecture/system/systemdesign.adoc[]
 
 <<<<
-=== Deployment/Installation
+include::architecture/system/environments.adoc[]
 
 
+include::architecture/system/installation.adoc[]
 
 
 <<<<
@@ -87,8 +86,7 @@ include::architecture/quality/authenticity_certificates.adoc[]
 
 <<<<
 == Cross cutting concepts
-//include::architecture/conceptual/release.adoc[]
-
+include::architecture/conceptual/encryption.adoc[]
 
 
 <<<<
