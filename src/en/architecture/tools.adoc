@@ -78,14 +78,16 @@ To make preview for images working in VScode, add some lines to `settings.json` 
     "editor.rulers": [120]
 },
 "asciidoc.preview.attributes": {
-    "toc": "auto",
-    "imagesdir": "${workspaceFolder}/images/",
+    "imagesdir": "${workspaceFolder}/images",
+    "fontsdir": "${workspaceFolder}/themes/telefluid",
+    "stylesdir": "${workspaceFolder}/themes/telefluid",
+    "stylesheet": "telefluid.css", 
+    "linkcss": "",
 },
-"asciidoc.trace": "verbose",
-"asciidoc.asciidoctorpdf_command": "asciidoctor-pdf -a pdf-fontsdir=themes/telefluid-pdf\
-   -a pdf-themesdir=themes/telefluid-pdf -a pdf-theme=telefluid-pdf --destination-dir=../.. --trace --verbose",
-"asciidoc.use_asciidoctorpdf": true,
 "asciidoc.preview.useEditorStyle": false,
+"asciidoc.trace": "verbose",
+"asciidoc.asciidoctorpdf_command": "asciidoctor-pdf -a pdf-fontsdir="${workspaceFolder}/themes/telefluid-pdf" -a pdf-themesdir="${workspaceFolder}/themes/telefluid-pdf" -a pdf-theme=telefluid-pdf --destination-dir="${workspaceFolder}/gen/pdf" --trace --verbose",
+"asciidoc.use_asciidoctorpdf": true,
 ----
 
 === Solve draw.io SVG and formatted labels problem
