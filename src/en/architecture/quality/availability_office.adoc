@@ -1,6 +1,6 @@
 ==== Availability during office hours
 The system is always available during office hours (weekdays, 7:00h - 20:00h CET).
-Non-catastrophic, unexpected outages should be fixed within 
+Non-catastrophic, unexpected outages should be fixed within 1 hour.
 
 
 .Observations & metrics
@@ -9,12 +9,13 @@ Non-catastrophic, unexpected outages should be fixed within
 
 
 .Quality measures
-* Major upgrades that require a downtime
+* Major upgrades that require a downtime are planned for non-office hours.
 
-* Loadbalancer replaces nodes on unexpected outage
+* Loadbalancer replaces nodes on unexpected node outage.
 
-* There is no guarantee to solve every unexpected, non-catastrophic outage within an hour.
-  The incident process is organized so that in general, a fix within one our is possible.
+* There is way to guarantee a solution for every unexpected, non-catastrophic outage within an hour.
+  Thus, the incident process is organized so that in general, a fix within one our is the average standard
+  with an early pre-warning for the case of delay.
 
 * External health checkers check primary use cases every 5 minutes (see Section ...)
   for early alarming on outage.
