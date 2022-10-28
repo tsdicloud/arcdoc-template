@@ -146,14 +146,14 @@ heading:
     font-color: $tele-head-default-color
     font-size: $base-font-size
 caption:
-  background-color: transparent
+  # background-color: transparent
   line-height: 1
   font-color: $tele-head-default-color
   font-size: $base-font-size
   font-style: bold
 image:
   caption:
-    background-color: transparent
+    # background-color: transparent
     line-height: 0.9
     font-color: $tele-head-default-color
     font-size: $base-font-size * 0.8
@@ -182,6 +182,7 @@ admonition:
   column-rule-style: solid
   column-rule-width: 4
   label:
+    # font-background: $tele-white
     font-color: $tele-primary-color
     vertical-align: middle
     text-align: center
@@ -195,7 +196,7 @@ admonition:
   #  caution:
 
 table:
-  background-color: transparent
+  # background-color: transparent
   font-size: $base-font-size * 0.8
   line-height: 0.9
   head:
