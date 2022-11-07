@@ -52,7 +52,8 @@ cd arcdoc-template
 asciidoctor -b html5 -a imagesdir="../../../images" -a fontsdir="../../../stylesdir"\
  -a linkcss -a stylesdir="../../../themes/telefluid" -a stylesheet="telefluid.css"\
  -a revdate="$(arcdate)" -a revnumber=", $(arcnumber)"\
- --trace --verbose --destination-dir=gen/en/html --trace src/en/architecture-book.adoc
+ --destination-dir=gen/en/html src/en/\
+ --trace --verbose src/en/architecture-book.adoc
 ----
 
 .pdf
@@ -86,7 +87,7 @@ To make preview for images working in VScode, add some lines to `settings.json` 
 },
 "asciidoc.preview.useEditorStyle": false,
 "asciidoc.trace": "verbose",
-"asciidoc.asciidoctorpdf_command": "asciidoctor-pdf -a pdf-fontsdir="${workspaceFolder}/themes/telefluid-pdf" -a pdf-themesdir="${workspaceFolder}/themes/telefluid-pdf" -a pdf-theme=telefluid-pdf --destination-dir="${workspaceFolder}/gen/pdf" --trace --verbose",
+"asciidoc.asciidoctorpdf_command": "asciidoctor-pdf -a pdf-fontsdir='${workspaceFolder}/themes/telefluid-pdf' -a pdf-themesdir='${workspaceFolder}/themes/telefluid-pdf' -a pdf-theme=telefluid-pdf --destination-dir='${workspaceFolder}/gen/pdf' --trace --verbose",
 "asciidoc.use_asciidoctorpdf": true,
 ----
 
