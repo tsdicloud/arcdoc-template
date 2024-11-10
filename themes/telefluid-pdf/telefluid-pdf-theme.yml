@@ -26,8 +26,9 @@ font:
   - Noto Serif
 tele:
   primary-color: E20074
-  secondary-color: 216BFF
-  head-default-color: 666666
+  secondary-color: 579292
+  head-default-color: 999999
+  link-color: 0D39DF
   literal-color: 999999
   text-color: 000000
   light-shade: E5E5E5
@@ -37,13 +38,6 @@ tele:
   check-color: 187431
   uncheck-color: D82A48
   box-color: FFF4C6
-  link-color: 2238DF
-  # link-hover-color: 0819BD
-  # link-visited-color: 6C3BDB
-  # link-active-color: 000D99
-  light-box-color: #f7f7f8
-  redact-color: #7d94f9
-
 page:
   margin-outer: [2.2cm 2.2cm 2.2cm 2.2cm]
   layout: portrait
@@ -85,9 +79,48 @@ title:
       font-style: bold_italic
       font-size: 14pt
       ## delimiter: '\n'
+
 cover:
   back:
     image:
+
+toc:
+  dot-leader:
+    levels: 1 2 3 4
+
+heading:
+  chapter-break-before: auto
+  font:
+    line-height: 1    
+    family: TeleNeo
+    style: bold_italic
+  h1:
+    font:
+      color: $tele-primary-color
+      style: bold
+      size: 20pt
+  h2:
+    font:
+      color: $tele-primary-color
+      style: bold
+      size: 20pt
+  h3:
+    font:
+      color: $tele-head-default-color
+      style: bold
+      size: 14pt
+  h4:
+    font:
+      color: $tele-head-default-color
+      size: 12.5pt
+  h5:
+    font:
+      color: $tele-head-default-color
+      size: 12pt
+  h6:
+    font:
+      color: $tele-head-default-color
+      size: $base-font-size
 
 footer:
   border-style: none
@@ -109,107 +142,74 @@ footer:
       content: '{revremark}'
     right:
       content: '{version-label}'
+
 base:
   font:
     color: $tele-text-color
     family: TeleNeo
     style: normal
-    size: 10
-    line-height: 1.25
-link:
-  text-decoration: none
-  font-color: $tele-link-color
-  font-style: bold_italic
+    size: 11
+  line-height: 1.25
 
-heading:
-  chapter-break-before: auto
+link:
   font:
-    line-height: 1    
-    family: TeleNeo
-    style: bold
-  h1:
-    font-color: $tele-primary-color
-    font-size: 20pt
-  h2:
-    font-color: $tele-primary-color
-    font-size: 20pt
-  h3:
-    font-color: $tele-secondary-color
-    font-size: 14pt
-  h4:
-    font-color: $tele-head-default-color
-    font-size: 12.5pt
-  h5:
-    font-color: $tele-head-default-color
-    font-size: 12pt
-  h6:
-    font-color: $tele-head-default-color
-    font-size: $base-font-size
+    color: $tele-link-color
+    style: italic
+
 caption:
-  # background-color: transparent
-  line-height: 1
-  font-color: $tele-head-default-color
-  font-size: $base-font-size
-  font-style: bold
+  font:
+    color: $tele-head-default-color
+    style: bold_italic
+    size: $base-font-size
+  line-height: 1.25
+
 image:
   caption:
-    # background-color: transparent
-    line-height: 0.9
-    font-color: $tele-head-default-color
-    font-size: $base-font-size * 0.8
-    font-style: italic
+    font:
+      color: $tele-medium-shade
+      size: 7
+      style: italic
+    line-height: 1
+    end: bottom
 
-literal:
-  font-color: $tele-literal-color
-  font-size: $base-font-size * 0.8
-code:
-  border-radius: 8
-  border-width: 0
-  base-font-size-min: 0
-  font-size: $base-font-size * 0.8
-  background-color: $tele-light-shade
-code-linenum:
-  font-color: $tele-primary-color
+quote:
+  caption:
+    font:
+      style: italic
+    line-height: 1
 
-admonition:
-  border-radius: 8
-  border-width: 0
-  base-font-size-min: 0
-  font-size: $base-font-size * 0.8
-  font-style: italic
-  background-color: $tele-light-box-color
-  column-rule-color: $tele-primary-color
-  column-rule-style: solid
-  column-rule-width: 4
-  label:
-    # font-background: $tele-white
-    font-color: $tele-primary-color
-    vertical-align: middle
-    text-align: center
-  #icon:
-  #  note:
-  #    image:
-  #    size: 20
-  #  tip:
-  #  warning: 
-  #  important:
-  #  caution:
+codespan:
+  font:
+    color: $tele-secondary-color
+    size: $base-font-size * 0.8
 
 table:
-  # background-color: transparent
+  background-color: transparent
   font-size: $base-font-size * 0.8
   line-height: 0.9
   head:
     font-style: normal
     font-color: $tele-primary-color
     border-bottom-width: 1
+  caption:
+    title: '{counter:table-number} {table-caption}'
+    font:
+      color: $tele-medium-shade
+      size: 7
+      style: italic
+    line-height: 1
+    end: bottom
 
 description-list:
-  font-size: $base-font-size
-  font_color: $tele-dark-shade
-  block-margin-top: 2
-  block-margin-bottom: 2
-outline-list:
+  term:
+    font:
+      style: normal
+      size: $base-font-size
+      color: $tele-secondary-color
+  block:
+    margin-top: 2
+    margin-bottom: 2
+list:
   marker-font-color: $tele-primary-color
   item-spacing: 4
 ulist:
@@ -234,11 +234,22 @@ ulist:
     font_color: $tele-uncheck-color
     line-height: 0.6
 
-role:
-  redact:
-    border-radius: 0
-    border-width: 0
-    font-size: $base-font-size * 0.9
-    font-style: italic
-    font-color: $tele-redact-color
-    # background-color: $tele-light-box-color
+code:
+  font-size: $base-font-size * 0.8
+  base-font-size-min: 0
+  background-color: $tele-light-shade
+  border-radius: 0
+  border-width: 0
+  linenum:
+    font-color: $tele-light-shade
+
+conum:
+  font_color: $tele-primary-color
+
+example:
+  font-family: TeleNeo
+  font-style: normal
+  background-color: $tele-box-color
+  border-radius: 0
+  border-width: 0
+ 

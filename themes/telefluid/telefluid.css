@@ -7,7 +7,7 @@
  * FIXME: The styling is still a bit rough in places.
  *
  */
-
+ 
 @font-face {
   font-family: TeleNeoRegular;
   src: url(TeleNeoWeb-Regular.woff2) format("woff2"),
@@ -74,12 +74,14 @@ body {
   scrollbar-color: var(--tele-white) var(--tele-primary-color);
   margin: 0px;
   padding: 0px;
+  word-wrap: anywhere;
 }
 
 #header {
-  margin: 0px 1px 0px 0px;
+  margin: 0px auto;
   padding: 0px;
   background-color: var(--tele-primary-color);
+  margin: auto;
 }
 
 /* Title font. */
@@ -93,61 +95,40 @@ caption.title p.table.header,
 }
 
 div.details {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
   background-color: var(--telewhite);
   padding: 0.5em 0.5em 0px 0.5em;
-  margin: 0px;
+  margin: 0px auto;
 }
 
 #toc {
   background-color: var(--telewhite);
   padding: 0.5em;
   margin: 0px 0px 4px 0px;
-  list-style-type: none;
-}
-
-#toc li {
-  list-style-type: none;
-}
-
-#toc a {
-  border-bottom: 1px dotted #999999;
-  color: #3A3A4D !important;
-  text-decoration: none !important;
-}
-
-#toc a:hover {
-  border-bottom: 1px solid #6D4100;
-  color: #6D4100 !important;
-  text-decoration: none !important;
-}
-
-.content {
-  /* background-color: var(--telewhite); */
-  padding: 0.5em;
 }
 
 #content {
-  /* top content body */
-  margin-left: 1em;
-  max-width: 80em;
+  /* Block element content. */
+  background-color: var(--telewhite);
+  padding: 0.5em;
+  margin: 0px auto;
 }
-
 
 #footer {
   background-color: var(--teleblack);
-  margin: 0px;
+  margin: 0px auto;
   padding: 0px;
+  height: 36pt;
 }
 
 #footer-text::before {
   content: url(T_systems_logo_rgb_n.svg);
   display: block;
-  float: left;
+  float:left;
   padding: 0.5em 2em 0.3em 1em;
   overflow: hidden;
-  width: 100pt;
+  width: 100pt; 
+  /* width: 10%;
+  height: 10%; */
   white-space: nowrap;
 }
 
@@ -174,24 +155,24 @@ div.details {
 h1 {
   display: inline-block;
   height: 48px;
+  margin: 0px;
   padding: 0px;
-  overflow: hidden;
+  overflow: hidden; 
   font-family: TeleNeoExtraBold;
   font-size: 14pt;
   color: var(--tele-white);
   line-height: 1;
-  vertical-align: middle;
+  /* vertical-align: middle; */
 }
 
 
 h1::before {
-  vertical-align: middle;
   content: url(T_systems_logo_rgb_n.svg);
   display: inline-block;
-  float: left;
+  float:left;
   padding: 0.5em 2em 0.3em 1em;
   overflow: hidden;
-  width: 100pt;
+  width: 100pt; 
   white-space: nowrap;
 }
 
@@ -226,42 +207,16 @@ div.title {
   line-height: 1
 }
 
-div.toclevel1,
-div.toclevel2,
-div.toclevel3,
-div.toclevel4 {
-  margin-top: 0;
-  margin-bottom: 0;
+#toc a {
+  border-bottom: 1px dotted #999999;
+  color: #3A3A4D !important;
+  text-decoration: none !important;
 }
 
-div.toclevel1 {
-  margin-top: 0.3em;
-  margin-left: 0;
-  font-size: 1.0em;
-}
-
-div.toclevel2 {
-  margin-top: 0.25em;
-  margin-left: 1em;
-  font-size: 0.9em;
-}
-
-div.toclevel3 {
-  margin-left: 2em;
-  font-size: 0.8em;
-}
-
-div.toclevel4 {
-  margin-left: 3em;
-  font-size: 0.8em;
-}
-
-
-em {
-  font-style: normal ! important;
-  font-weight: bold ! important;
-  color: #662222 ! important;
-  letter-spacing: +0.08em ! important;
+#toc a:hover {
+  border-bottom: 1px solid #6D4100;
+  color: #6D4100 !important;
+  text-decoration: none !important;
 }
 
 a {
@@ -282,10 +237,12 @@ a:hover {
 
 em {
   font-style: italic;
+  color: #444466;
 }
 
 strong {
   font-weight: bold;
+  color: #444466;
 }
 
 /* #h1, h2, h3, h4, h5, h6 {
@@ -320,12 +277,14 @@ li>p {
 }
 
 pre {
+  background-color: #CCCCCC;
   color: telegray90;
   padding: 0;
   margin: 0;
 }
 
 #author {
+  color: #444466;
   font-weight: bold;
   font-size: 1.1em;
 }
@@ -344,41 +303,20 @@ div.literalblock,
 div.listingblock,
 div.sidebarblock,
 div.admonitionblock {
-  /* Block element content. */
-  border-radius: 8px;
   margin-top: 1.5em;
   margin-bottom: 1.5em;
+  overflow-wrap: break-word;
 }
 
-div.listingblock>div.content {
-  border: 1px solid silver;
-  background: #f4f4f4;
-  padding: 0.5em;
+div.admonitionblock {
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
 }
-
-.adminitionblock {
-  padding: 0px;
-}
-
-.admonitionblock .icon {
-  border: 1px solid var(--tele-primary-color);
-  background: var(--tele-primary-color);;
-  vertical-align: top;
-  font-size: 1.1em;
-  font-weight: bold;
-  padding-right: 0.5em;
-}
-
-div.admonitionblock .content {
-  border: 1px solid silver;
-  padding-left: 0.5em;
-  border: 2px solid silver;
-}
-
 
 /* Block element titles. */
 div.title,
 caption.title {
+  color: #444466;
   font-weight: bold;
   text-align: left;
   margin-top: 1.0em;
@@ -393,11 +331,11 @@ td div.title:first-child {
   margin-top: 0.0em;
 }
 
-#content div.title:first-child {
+div.content div.title:first-child {
   margin-top: 0.0em;
 }
 
-#content+div.title {
+div.content+div.title {
   margin-top: 0.0em;
 }
 
@@ -407,6 +345,11 @@ div.sidebarblock>div.content {
   padding: 0.5em;
 }
 
+div.listingblock>div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
 
 div.quoteblock {
   padding-left: 2.0em;
@@ -437,6 +380,20 @@ div.verseblock+div.attribution {
   text-align: left;
 }
 
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #444466;
+  padding-right: 0.5em;
+}
+
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 2px solid silver;
+}
+
 div.exampleblock>div.content {
   border-left: 2px solid silver;
   padding: 0.5em;
@@ -463,6 +420,7 @@ dt {
   margin-top: 0.5em;
   margin-bottom: 0;
   font-style: normal;
+  color: #444466;
 }
 
 dd>*:first-child {
@@ -522,7 +480,6 @@ table td {
   border-bottom: 1px solid var(--tele-light-shade);
   border-collapse: collapse;
 }
-
 table th {
   border-bottom: 1px solid var(--tele-light-shade);
 }
@@ -628,6 +585,7 @@ td.hdlist1 {
   vertical-align: top;
   font-style: normal;
   padding-right: 0.8em;
+  color: #444466;
 }
 
 td.hdlist2 {
@@ -643,6 +601,44 @@ div.hdlist.compact tr {
   background: yellow;
 }
 
+#toctitle {
+  color: #666688;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel1,
+div.toclevel2,
+div.toclevel3,
+div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+div.toclevel1 {
+  margin-top: 0.3em;
+  margin-left: 0;
+  font-size: 1.0em;
+}
+
+div.toclevel2 {
+  margin-top: 0.25em;
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.8em;
+}
+
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.8em;
+}
+
 .monospaced,
 tt,
 div.listingblock>div.content {
@@ -655,7 +651,14 @@ div.listingblock>div.content {
 
 .paragraph p {
   line-height: 1.5em;
-  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+.paragraph p,
+li,
+dd,
+.content {
+  max-width: 45em;
 }
 
 .admonitionblock {
@@ -679,6 +682,13 @@ div.sectionbody div.ulist>ul>li div.ulist>ul>li {
 
 div.sectionbody div.ulist>ul>li div.ulist>ul>li>* {
   color: black;
+}
+
+em {
+  font-style: normal ! important;
+  font-weight: bold ! important;
+  color: #662222 ! important;
+  letter-spacing: +0.08em ! important;
 }
 
 /**

@@ -9,10 +9,10 @@ pkg/
 /.yardoc/
 /rdoc/
 /shippable/
+/generated
+/gen
 
 .DS_Store
 asciidoctor.css
 src/*.pdf
 settings.json
-
-gen/
