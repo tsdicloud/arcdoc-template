@@ -1,8 +1,7 @@
 // asciidoctor pdf generation
 :toc:
 
-// asciidoc settings for EN
-// ==================================
+// different handling of icons on different platforms
 ifdef::env-github[]
 :tip-caption: :bulb:
 :note-caption: :information_source:
@@ -18,10 +17,21 @@ ifndef::env-github[]
 :warning-caption: Warning
 endif::[]
 
+// asciidoc settings for EN
+// ==================================
+:caution-caption: Attention
+:important-caption: Important
+:note-caption: Note
+:tip-caption: Hint
+:warning-caption: Warning
+
 :appendix-caption: Appendix
 :example-caption: Example
 :figure-caption: Figure
-:!table-caption: Table
 
 :toc-title: Table of content
+
+:table-caption: Table
+:table-grid: rows
+:table-frame: none
 

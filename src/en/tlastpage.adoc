@@ -4,9 +4,9 @@
 {email} +
 {version-label} +
 {revremark} +
-Last modified: {localdate} +
- +
-Based upon https://docs.arc42.org/home/[Arc42 - https://docs.arc42.org/home/]. +
+ Last modified: {localdate} +
+  +
+Based upon https://docs.arc42.org/home/[Arc42 at https://docs.arc42.org/home/].
  +
  +
  +
