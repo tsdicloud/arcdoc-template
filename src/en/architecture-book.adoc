@@ -29,7 +29,7 @@ include::config.adoc[]
 
 <<<<
 == Introduction and purpose
-change silvia
+change silvia & frank
 
 
 include::architecture/purpose.adoc[]
