@@ -18,7 +18,7 @@ endif::[]
 :title-page:
 :toc:
 include::about.adoc[]
-:description:   A useful template to describe Magenta architectures silvia
+:description:   A useful template to describe Magenta architectures 
 include::config.adoc[]
 // end important sequence
 
@@ -29,7 +29,7 @@ include::config.adoc[]
 
 <<<<
 == Introduction and purpose
-change
+change silvia
 
 
 include::architecture/purpose.adoc[]
