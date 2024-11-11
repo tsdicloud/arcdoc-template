@@ -8,5 +8,5 @@ context diagram. As we see the first chapter of the documentation less formal an
 does, we recommend a business diagram enhanced with few technical bites the customer expects to see if start reading,
 Deeper technical context diagrams and those that refer to solution details go into the logical building block section.#
 
-.System context example diagram
+.System context group2
 image::context_en.drawio.svg[System context view]
