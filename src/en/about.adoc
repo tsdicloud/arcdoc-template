@@ -1,8 +1,8 @@
 :author_1:         Bernd Rederlechner
 :authorinitials_1: rbe
 :email_1:          bernd.rederlechner@t-systems.com
-:revdate:          2024/01/17
-:revnumber:        , Version 2.0.1
+:revdate:          2025/06/17
+:revnumber:        , Version 0.0.1
 :revremark:        internal
-:version-label:    T-Systems, PU Digital - BA Emerging Industries
+:version-label:    T-Systems, PU Digital
 // don´t use empty lines between information
