@@ -74,14 +74,12 @@ body {
   scrollbar-color: var(--tele-white) var(--tele-primary-color);
   margin: 0px;
   padding: 0px;
-  word-wrap: anywhere;
 }
 
 #header {
-  margin: 0px auto;
+  margin: 0px;
   padding: 0px;
   background-color: var(--tele-primary-color);
-  margin: auto;
 }
 
 /* Title font. */
@@ -95,9 +93,11 @@ caption.title p.table.header,
 }
 
 div.details {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   background-color: var(--telewhite);
   padding: 0.5em 0.5em 0px 0.5em;
-  margin: 0px auto;
+  margin: 0px;
 }
 
 #toc {
@@ -108,16 +108,15 @@ div.details {
 
 #content {
   /* Block element content. */
+  border-radius: 8px;
   background-color: var(--telewhite);
   padding: 0.5em;
-  margin: 0px auto;
 }
 
 #footer {
   background-color: var(--teleblack);
-  margin: 0px auto;
+  margin: 0px;
   padding: 0px;
-  height: 36pt;
 }
 
 #footer-text::before {
@@ -162,11 +161,12 @@ h1 {
   font-size: 14pt;
   color: var(--tele-white);
   line-height: 1;
-  /* vertical-align: middle; */
+  vertical-align: middle;
 }
 
 
 h1::before {
+  vertical-align: middle;
   content: url(T_systems_logo_rgb_n.svg);
   display: inline-block;
   float:left;
@@ -268,6 +268,7 @@ hr {
 p {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+  white-space: nowrap;
 }
 
 ul,
